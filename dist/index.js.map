@@ -1,1 +1,1 @@
-{"mappings":"","sources":["src/index.js"],"sourcesContent":[""],"names":[],"version":3,"file":"index.js.map"}
+{"mappings":"ACAA,QAAQ,GAAA,CAAI","sources":["<anon>","src/index.js"],"sourcesContent":["(() => {\nconsole.log(\"Is working\");\n\n})();\n//# sourceMappingURL=index.js.map\n","console.log('Is working');"],"names":["console","log"],"version":3,"file":"index.js.map"}
