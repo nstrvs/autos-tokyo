@@ -66,5 +66,5 @@
         <option value="Unemployment Insurance">Unemployment Insurance</option>
       </select>
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${t}" required="">
-    `)})}();
+    `)})}(),function(){function e(e){var t=document.getElementById("yes"),n=document.getElementById("no");"yes"===e.target.id&&t.checked&&(n.checked=!1),"no"===e.target.id&&n.checked&&(t.checked=!1)}document.getElementById("yes").addEventListener("click",e),document.getElementById("no").addEventListener("click",e)}();
 //# sourceMappingURL=index.js.map

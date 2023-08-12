@@ -1,6 +1,7 @@
 import './index.css';
-import { employmentStatus, addIncome } from './app/form.js';
+import { employmentStatus, addIncome, coBuyer } from './app/form.js';
 
 
 employmentStatus();
 addIncome();
+coBuyer();
