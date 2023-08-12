@@ -1,72 +1,10 @@
-!function(){let e=document.getElementById("employment-status__select");function t(e){var t=document.createElement("div");t.id="employment-status__wrapper",t.className="employment-status__wrapper",t.innerHTML=e;let o=document.getElementById("employment-status");o.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("employment-status__wrapper");e&&e.remove();let o=this.value;switch(o){case"Employed":t(`
-              <div class="form__text-field-wrapper">
-                <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
-                <div class="date-field w-embed"><input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
-                `);break;case"Self-Employed":t(`
-              <div class="form__text-field-wrapper">
-                <input type="text" class="text-field w-input" maxlength="256" name="Business Name" data-name="Business Name" placeholder="Business Name *" id="Business-Name" required="">
-                <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
-              </div>
-              <div class="form__text-field-wrapper">
-                <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income" required="">
-                <div class="date-field w-embed">
-                  <input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                </div>
-              </div> 
-                `);break;case"Unemployed":t(`
-              <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income" required="">
-                `);break;case"Retired":t(`
-              <div class="form__text-field-wrapper">
-                <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
-                  <option value="Income Source">Income Source *</option>
-                  <option value="Disability">Disability</option>
-                  <option value="Investment Income">Investment Income </option>
-                  <option value="Public Assistance">Public Assistance</option>
-                  <option value="Rental Income">Rental Income</option>
-                  <option value="Retired with Pension">Retired with Pension</option>
-                  <option value="Social Security">Social Security</option>
-                  <option value="Spousal Support">Spousal Support</option>
-                </select>
-                <div class="date-field w-embed">
-                  <input id="retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                </div>
-              </div>
-              <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income" required="">
-                `);break;case"Other":t(`
-              <div class="form__text-field-wrapper">
-                <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
-                  <option value="Income Source">Income Source *</option>
-                  <option value="Child Support">Child Support</option>
-                  <option value="Disability">Disability</option>
-                  <option value="Investment Income">Investment Income </option>
-                  <option value="Public Assistance">Public Assistance</option>
-                  <option value="Rental Income">Rental Income</option>
-                  <option value="Retired with Pension">Retired with Pension</option>
-                  <option value="Social Security">Social Security</option>
-                  <option value="Spousal Support">Spousal Support</option>
-                  <option value="Unemployment Insurance">Unemployment Insurance</option>
-                </select>
-                <div class="date-field w-embed">
-                  <input id="retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                </div>
-              </div>
-                `)}})}(),function(){let e=document.getElementById("add-income"),t=0;e.addEventListener("click",function(){!function(e){var o=document.createElement("div");o.id=`Income-Source-${t}`,o.className="form__text-field-wrapper",o.innerHTML=e;let n=document.getElementById("add-income__section");n.appendChild(o);let i=document.getElementById(`less-income-${t}`);i.addEventListener("click",function(){n.removeChild(o)}),t++}(`
-    <div id="less-income-${t}" class="fontawesome h2 button"></div>
-    <div class="form__text-field-wrapper">
-      <select id="Income-Source-${t}" name="Income Source" data-name="Income Source" required="" class="select w-select">
-        <option value="Income Source">Income Source *</option>
-        <option value="Child Support">Child Support</option>
-        <option value="Disability">Disability</option>
-        <option value="Investment Income">Investment Income </option>
-        <option value="Public Assistance">Public Assistance</option>
-        <option value="Rental Income">Rental Income</option>
-        <option value="Retired with Pension">Retired with Pension</option>
-        <option value="Social Security">Social Security</option>
-        <option value="Spousal Support">Spousal Support</option>
-        <option value="Unemployment Insurance">Unemployment Insurance</option>
-      </select>
-      <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${t}" required="">
-    `)})}(),function(){function e(){var e=document.createElement("div");e.id="co-buyer__sibling",e.className="co-buyer__sibling",e.innerHTML=`
+export function coBuyer() {
+
+  function createDiv() {
+    var newDiv = document.createElement('div');
+    newDiv.id = 'co-buyer__sibling';
+    newDiv.className = 'co-buyer__sibling';
+    newDiv.innerHTML = `
     <div class="co-buyer__wrapper">
       <h2 class="heading-2">Let's get some info from your co‑buyer</h2>
       <div class="form__text-field-wrapper">
@@ -192,11 +130,74 @@
         </div>
       </div>
     </div>
-    `;let t=document.getElementById("co-buyer__section");t.appendAfter(e)}var t=document.getElementById("yes"),o=document.getElementById("no");o.addEventListener("click",function(){if(this.checked)o.checked=!1,t.checked=!0,e();else{o.checked=!0,t.checked=!1;let e=document.getElementById("co-buyer__sibling");e.remove()}t.addEventListener("click",function(){if(this.checked){t.checked=!1,o.checked=!0;let e=document.getElementById("co-buyer__sibling");e.remove()}else t.checked=!0,o.checked=!1,e()})})}(),function(){let e=document.getElementById("co-buyer-employment-status__select");function t(e){var t=document.createElement("div");t.id="co-buyer-employment-status__wrapper",t.className="co-buyer-employment-status__wrapper",t.innerHTML=e;let o=document.getElementById("co-buyer-employment-status");o.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("co-buyer-employment-status__wrapper");e&&e.remove();let o=this.value;switch(o){case"Employed":t(`
+    `
+    const sibling = document.getElementById('co-buyer__section');
+    sibling.appendAfter(newDiv);
+  }
+
+  
+    var yesCheckbox = document.getElementById('yes');
+    var noCheckbox = document.getElementById('no');
+
+    noCheckbox.addEventListener('click', function() {
+
+      if (this.checked) {
+        noCheckbox.checked = false;
+        yesCheckbox.checked = true;
+        createDiv();
+      } else {
+        noCheckbox.checked = true;
+        yesCheckbox.checked = false;
+        const coBuyerContent = document.getElementById('co-buyer__sibling');
+        coBuyerContent.remove();
+      }
+  
+      yesCheckbox.addEventListener('click', function() {
+        if (this.checked) {
+          yesCheckbox.checked = false;
+          noCheckbox.checked = true;
+          const coBuyerContent = document.getElementById('co-buyer__sibling');
+          coBuyerContent.remove();
+        } else {
+          yesCheckbox.checked = true;
+          noCheckbox.checked = false;
+          createDiv();
+        }
+      });
+  
+    });
+}
+    export function coBuyerEmploymentStatus() {
+    const coBuyerEmploymentStatus = document.getElementById('co-buyer-employment-status__select');
+  
+    function createDiv(content) {
+        var newDiv = document.createElement('div');
+        newDiv.id = 'co-buyer-employment-status__wrapper';
+        newDiv.className = 'co-buyer-employment-status__wrapper';
+        newDiv.innerHTML = content;
+        const container = document.getElementById('co-buyer-employment-status');
+        container.appendChild(newDiv);
+    }
+  
+    coBuyerEmploymentStatus.addEventListener('change', function() {
+        const wrapper = document.getElementById('co-buyer-employment-status__wrapper');
+        if (wrapper) {
+            wrapper.remove();
+        }
+  
+        const selectedValue = this.value;
+  
+        switch (selectedValue) {
+            case 'Employed':
+                let employedContent = `
                 <div class="form__text-field-wrapper">
                   <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="co-buyer-Employer-Name" required="">
                   <div class="date-field w-embed"><input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
-                  `);break;case"Self-Employed":t(`
+                  `;
+                createDiv(employedContent);
+                break;
+            case 'Self-Employed':
+                let selfEmployedContent = `
                 <div class="form__text-field-wrapper">
                   <input type="text" class="text-field w-input" maxlength="256" name="Business Name" data-name="Business Name" placeholder="Business Name *" id="co-buyer-Business-Name" required="">
                   <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="co-buyer-Job-Title" required="">
@@ -207,9 +208,17 @@
                     <input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                   </div>
                 </div> 
-                  `);break;case"Unemployed":t(`
+                  `;
+                createDiv(selfEmployedContent);
+                break;
+            case 'Unemployed':
+                let unemployedContent = `
                 <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income" required="">
-                  `);break;case"Retired":t(`
+                  `;
+                createDiv(unemployedContent);
+                break;
+            case 'Retired':
+                let retiredContent = `
                 <div class="form__text-field-wrapper">
                   <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                     <option value="Income Source">Income Source *</option>
@@ -226,7 +235,11 @@
                   </div>
                 </div>
                 <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income" required="">
-                  `);break;case"Other":t(`
+                  `;
+                createDiv(retiredContent);
+                break;
+            case 'Other':
+                let otherContent = `
                 <div class="form__text-field-wrapper">
                   <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                     <option value="Income Source">Income Source *</option>
@@ -244,10 +257,39 @@
                     <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                   </div>
                 </div>
-                  `)}})}(),function(){let e=document.getElementById("add-income"),t=0;e.addEventListener("click",function(){!function(e){var o=document.createElement("div");o.id=`Income-Source-${t}`,o.className="form__text-field-wrapper",o.innerHTML=e;let n=document.getElementById("add-income__section");n.appendChild(o);let i=document.getElementById(`less-income-${t}`);i.addEventListener("click",function(){n.removeChild(o)}),t++}(`
-      <div id="co-buyer-less-income-${t}" class="fontawesome h2 button"></div>
+                  `;
+                createDiv(otherContent);
+                break;
+        }
+    });
+  }
+  
+  export function coBuyerAddIncome() {
+    const coBuyerAddIncomeButton = document.getElementById('add-income');
+    let serialNumber = 0;
+  
+    function createDiv(content) {
+      var newDiv = document.createElement('div');
+      newDiv.id = `Income-Source-${serialNumber}`;
+      newDiv.className = 'form__text-field-wrapper';
+      newDiv.innerHTML = content;
+      const container = document.getElementById('add-income__section');
+      container.appendChild(newDiv);
+  
+      // Add an event listener to the remove button
+      const removeIncomeButton = document.getElementById(`less-income-${serialNumber}`);
+      removeIncomeButton.addEventListener('click', function() {
+        container.removeChild(newDiv);
+      });
+  
+      serialNumber++; // Increment the serial number after creating the div
+    }
+  
+    coBuyerAddIncomeButton.addEventListener('click', function() {
+      let content = `
+      <div id="co-buyer-less-income-${serialNumber}" class="fontawesome h2 button"></div>
       <div class="form__text-field-wrapper">
-        <select id="co-buyer-Income-Source-${t}" name="Income Source" data-name="Income Source" required="" class="select w-select">
+        <select id="co-buyer-Income-Source-${serialNumber}" name="Income Source" data-name="Income Source" required="" class="select w-select">
           <option value="Income Source">Income Source *</option>
           <option value="Child Support">Child Support</option>
           <option value="Disability">Disability</option>
@@ -259,6 +301,8 @@
           <option value="Spousal Support">Spousal Support</option>
           <option value="Unemployment Insurance">Unemployment Insurance</option>
         </select>
-        <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income-${t}" required="">
-      `)})}();
-//# sourceMappingURL=index.js.map
+        <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income-${serialNumber}" required="">
+      `;
+      createDiv(content);
+    });
+  }
