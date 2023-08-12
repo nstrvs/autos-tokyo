@@ -137,3 +137,22 @@ export function addIncome() {
     createDiv(content);
   });
 }
+
+export function coBuyer() {
+  function toggleCheckbox(event) {
+    var yesCheckbox = document.getElementById('yes');
+    var noCheckbox = document.getElementById('no');
+  
+    if (event.target.id === 'yes' && yesCheckbox.checked) {
+      noCheckbox.checked = false;
+    }
+  
+    if (event.target.id === 'no' && noCheckbox.checked) {
+      yesCheckbox.checked = false;
+    }
+  }
+  
+  document.getElementById('yes').addEventListener('click', toggleCheckbox);
+  document.getElementById('no').addEventListener('click', toggleCheckbox);
+  
+}
