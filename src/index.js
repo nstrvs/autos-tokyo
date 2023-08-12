@@ -5,5 +5,4 @@ import { coBuyer } from './app/coBuyer.js';
 
 employmentStatus();
 addIncome();
-
 coBuyer();
