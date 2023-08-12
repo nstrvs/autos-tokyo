@@ -3,7 +3,6 @@ export function employmentStatus() {
 
   function createDiv(content) {
       var newDiv = document.createElement('div');
-      newDiv.id = 'employment-status__wrapper';
       newDiv.className = 'employment-status__wrapper';
       newDiv.innerHTML = content;
       const container = document.getElementById('employment-status');
@@ -97,19 +96,28 @@ export function employmentStatus() {
 
 export function addIncome() {
   const addIncomeButton = document.getElementById('add-income');
-  let serialNumber = 0; // This variable will keep track of the serial number
+  let serialNumber = 0;
 
   function createDiv(content) {
     var newDiv = document.createElement('div');
-    newDiv.id = 'form__text-field-wrapper-' + serialNumber; // Append the serial number to the id
+    newDiv.id = `Income-Source-${serialNumber}`;
+    newDiv.className = 'form__text-field-wrapper';
     newDiv.innerHTML = content;
     const container = document.getElementById('add-income__section');
     container.appendChild(newDiv);
+
+    // Add an event listener to the remove button
+    const removeIncomeButton = document.getElementById(`less-income-${serialNumber}`);
+    removeIncomeButton.addEventListener('click', function() {
+      container.removeChild(newDiv);
+    });
+
+    serialNumber++; // Increment the serial number after creating the div
   }
 
   addIncomeButton.addEventListener('click', function() {
     let content = `
-    <div class="fontawesome h2 button"></div>
+    <div id="less-income-${serialNumber}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
       <select id="Income-Source-${serialNumber}" name="Income Source" data-name="Income Source" required="" class="select w-select">
         <option value="Income Source">Income Source *</option>
@@ -126,6 +134,5 @@ export function addIncome() {
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${serialNumber}" required="">
     `;
     createDiv(content);
-    serialNumber++; // Increment the serial number after creating the div
   });
 }

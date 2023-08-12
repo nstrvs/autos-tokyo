@@ -1,4 +1,4 @@
-!function(){let e=document.getElementById("employment-status__select");function t(e){var t=document.createElement("div");t.id="employment-status__wrapper",t.className="employment-status__wrapper",t.innerHTML=e;let n=document.getElementById("employment-status");n.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("employment-status__wrapper");e&&e.remove();let n=this.value;switch(n){case"Employed":t(`
+!function(){let e=document.getElementById("employment-status__select");function t(e){var t=document.createElement("div");t.className="employment-status__wrapper",t.innerHTML=e;let n=document.getElementById("employment-status");n.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("employment-status__wrapper");e&&e.remove();let n=this.value;switch(n){case"Employed":t(`
               <div class="form__text-field-wrapper">
                 <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
                 <div class="date-field w-embed"><input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
@@ -50,8 +50,8 @@
                   <input id="retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                 </div>
               </div>
-                `)}})}(),function(){let e=document.getElementById("add-income"),t=0;e.addEventListener("click",function(){(function(e){var n=document.createElement("div");n.id="form__text-field-wrapper-"+t,n.innerHTML=e;let o=document.getElementById("add-income__section");o.appendChild(n)})(`
-    <div class="fontawesome h2 button"></div>
+                `)}})}(),function(){let e=document.getElementById("add-income"),t=0;e.addEventListener("click",function(){!function(e){var n=document.createElement("div");n.id=`Income-Source-${t}`,n.className="form__text-field-wrapper",n.innerHTML=e;let o=document.getElementById("add-income__section");o.appendChild(n);let i=document.getElementById(`less-income-${t}`);i.addEventListener("click",function(){o.removeChild(n)}),t++}(`
+    <div id="less-income-${t}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
       <select id="Income-Source-${t}" name="Income Source" data-name="Income Source" required="" class="select w-select">
         <option value="Income Source">Income Source *</option>
@@ -66,5 +66,5 @@
         <option value="Unemployment Insurance">Unemployment Insurance</option>
       </select>
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${t}" required="">
-    `),t++})}();
+    `)})}();
 //# sourceMappingURL=index.js.map
