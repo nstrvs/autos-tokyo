@@ -94,3 +94,38 @@ export function employmentStatus() {
       }
   });
 }
+
+export function addIncome() {
+  const addIncomeButton = document.getElementById('add-income');
+  let serialNumber = 0; // This variable will keep track of the serial number
+
+  function createDiv(content) {
+    var newDiv = document.createElement('div');
+    newDiv.id = 'form__text-field-wrapper-' + serialNumber; // Append the serial number to the id
+    newDiv.innerHTML = content;
+    const container = document.getElementById('add-income__section');
+    container.appendChild(newDiv);
+  }
+
+  addIncomeButton.addEventListener('click', function() {
+    let content = `
+    <div class="fontawesome h2 button"></div>
+    <div class="form__text-field-wrapper">
+      <select id="Income-Source-${serialNumber}" name="Income Source" data-name="Income Source" required="" class="select w-select">
+        <option value="Income Source">Income Source *</option>
+        <option value="Child Support">Child Support</option>
+        <option value="Disability">Disability</option>
+        <option value="Investment Income">Investment Income </option>
+        <option value="Public Assistance">Public Assistance</option>
+        <option value="Rental Income">Rental Income</option>
+        <option value="Retired with Pension">Retired with Pension</option>
+        <option value="Social Security">Social Security</option>
+        <option value="Spousal Support">Spousal Support</option>
+        <option value="Unemployment Insurance">Unemployment Insurance</option>
+      </select>
+      <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${serialNumber}" required="">
+    `;
+    createDiv(content);
+    serialNumber++; // Increment the serial number after creating the div
+  });
+}
