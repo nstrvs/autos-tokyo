@@ -1,8 +1,34 @@
-!function(){let e=document.getElementById("employment-status__select");function t(e){var t=document.createElement("div");t.id="employment-status__wrapper",t.className="employment-status__wrapper",t.innerHTML=e;let n=document.getElementById("container");n.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("employment-status__wrapper");e&&e.remove();let n=this.value;switch(n){case"Employed":t(`
+export function employmentStatus() {
+  const employmentStatus = document.getElementById('employment-status__select');
+
+  function createDiv(content) {
+      var newDiv = document.createElement('div');
+      newDiv.id = 'employment-status__wrapper';
+      newDiv.className = 'employment-status__wrapper';
+      newDiv.innerHTML = content;
+      const container = document.getElementById('container');
+      container.appendChild(newDiv);
+  }
+
+  employmentStatus.addEventListener('change', function() {
+      const wrapper = document.getElementById('employment-status__wrapper');
+      if (wrapper) {
+          wrapper.remove();
+      }
+
+      const selectedValue = this.value;
+
+      switch (selectedValue) {
+          case 'Employed':
+              let employedContent = `
               <div class="form__text-field-wrapper">
                 <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
                 <div class="date-field w-embed"><input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
-                `);break;case"Self-Employed":t(`
+                `;
+              createDiv(employedContent);
+              break;
+          case 'Self-Employed':
+              let selfEmployedContent = `
               <div class="form__text-field-wrapper">
                 <input type="text" class="text-field w-input" maxlength="256" name="Business Name" data-name="Business Name" placeholder="Business Name *" id="Business-Name" required="">
                 <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
@@ -13,9 +39,17 @@
                   <input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                 </div>
               </div> 
-                `);break;case"Unemployed":t(`
+                `;
+              createDiv(selfEmployedContent);
+              break;
+          case 'Unemployed':
+              let unemployedContent = `
               <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income" required="">
-                `);break;case"Retired":t(`
+                `;
+              createDiv(unemployedContent);
+              break;
+          case 'Retired':
+              let retiredContent = `
               <div class="form__text-field-wrapper">
                 <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                   <option value="Income Source">Income Source *</option>
@@ -32,7 +66,11 @@
                 </div>
               </div>
               <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income" required="">
-                `);break;case"Other":t(`
+                `;
+              createDiv(retiredContent);
+              break;
+          case 'Other':
+              let otherContent = `
               <div class="form__text-field-wrapper">
                 <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                   <option value="Income Source">Income Source *</option>
@@ -50,5 +88,9 @@
                   <input id="retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                 </div>
               </div>
-                `)}})}();
-//# sourceMappingURL=index.js.map
+                `;
+              createDiv(otherContent);
+              break;
+      }
+  });
+}
