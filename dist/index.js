@@ -1,4 +1,4 @@
-!function(){let e=document.getElementById("employment-status__select");function t(e){var t=document.createElement("div");t.id="employment-status__wrapper",t.className="employment-status__wrapper",t.innerHTML=e;let n=document.getElementById("employment-status");n.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("employment-status__wrapper");e&&e.remove();let n=this.value;switch(n){case"Employed":t(`
+var e,t;!function(){let e=document.getElementById("employment-status__select");function t(e){var t=document.createElement("div");t.id="employment-status__wrapper",t.className="employment-status__wrapper",t.innerHTML=e;let n=document.getElementById("employment-status");n.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("employment-status__wrapper");e&&e.remove();let n=this.value;switch(n){case"Employed":t(`
               <div class="form__text-field-wrapper">
                 <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
                 <div class="date-field w-embed"><input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
@@ -66,9 +66,9 @@
         <option value="Unemployment Insurance">Unemployment Insurance</option>
       </select>
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${t}" required="">
-    `)})}(),function(){function e(){var e=document.createElement("div");e.id="co-buyer__sibling",e.className="co-buyer__sibling",e.innerHTML=`
+    `)})}(),e=document.getElementById("yes"),t=document.getElementById("no"),e.addEventListener("change",function(){this.checked&&function(){var e=document.createElement("div");e.id="co-buyer__sibling",e.className="co-buyer__sibling",e.innerHTML=`
       <div class="co-buyer__wrapper">
         <h1>Co-Buyer</h1>
       </div>
-    `;let t=document.getElementById("Dealership-Form");t.appendChild(e)}var t=document.getElementById("yes"),n=document.getElementById("no");n.addEventListener("click",function(){if(this.checked)t.checked=!1,e();else{n.checked=!1;let e=document.getElementById("co-buyer__sibling");e.remove()}}),t.addEventListener("click",function(){if(this.checked){n.checked=!1;let e=document.getElementById("co-buyer__sibling");e.remove()}else t.checked=!1,e()})}();
+    `;let t=document.getElementById("co-buyer__section");t.parentNode.insertBefore(e,t.nextSibling)}()}),t.addEventListener("change",function(){this.checked&&function(){let e=document.getElementById("co-buyer__sibling");e&&e.remove()}()});
 //# sourceMappingURL=index.js.map
