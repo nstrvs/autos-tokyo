@@ -66,7 +66,7 @@ var e,t;!function(){let e=document.getElementById("employment-status__select");f
         <option value="Unemployment Insurance">Unemployment Insurance</option>
       </select>
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${t}" required="">
-    `)})}(),e=document.getElementById("yes"),t=document.getElementById("no"),e.addEventListener("change",function(){this.checked&&function(){var e=document.createElement("div");e.id="co-buyer__sibling",e.className="co-buyer__sibling",e.innerHTML=`
+    `)})}(),e=document.getElementById("yes"),t=document.getElementById("no"),e.addEventListener("change",function(){this.checked&&(function(){var e=document.createElement("div");e.id="co-buyer__sibling",e.className="co-buyer__sibling",e.innerHTML=`
     <div class="co-buyer__wrapper">
       <h2 class="heading-2">Let's get some info from your co‑buyer</h2>
       <div class="form__text-field-wrapper">
@@ -192,7 +192,7 @@ var e,t;!function(){let e=document.getElementById("employment-status__select");f
         </div>
       </div>
     </div>
-    `;let t=document.getElementById("co-buyer__section");t.parentNode.insertBefore(e,t.nextSibling)}()}),t.addEventListener("change",function(){this.checked&&function(){let e=document.getElementById("co-buyer__sibling");e&&e.remove()}()}),function(){let e=document.getElementById("co-buyer-employment-status__select");function t(e){var t=document.createElement("div");t.id="co-buyer-employment-status__wrapper",t.className="co-buyer-employment-status__wrapper",t.innerHTML=e;let o=document.getElementById("co-buyer-employment-status");o.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("co-buyer-employment-status__wrapper");e&&e.remove();let o=this.value;switch(o){case"Employed":t(`
+    `;let t=document.getElementById("co-buyer__section");t.parentNode.insertBefore(e,t.nextSibling)}(),function(){let e=document.getElementById("co-buyer-employment-status__select");function t(e){var t=document.createElement("div");t.id="co-buyer-employment-status__wrapper",t.className="co-buyer-employment-status__wrapper",t.innerHTML=e;let o=document.getElementById("co-buyer-employment-status");o.appendChild(t)}e.addEventListener("change",function(){let e=document.getElementById("co-buyer-employment-status__wrapper");e&&e.remove();let o=this.value;switch(o){case"Employed":t(`
                 <div class="form__text-field-wrapper">
                   <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="co-buyer-Employer-Name" required="">
                   <div class="date-field w-embed"><input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
@@ -260,5 +260,5 @@ var e,t;!function(){let e=document.getElementById("employment-status__select");f
         <option value="Unemployment Insurance">Unemployment Insurance</option>
       </select>
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income-${t}" required="">
-    `)})}();
+    `)})}())}),t.addEventListener("change",function(){this.checked&&function(){let e=document.getElementById("co-buyer__sibling");e&&e.remove()}()});
 //# sourceMappingURL=index.js.map
