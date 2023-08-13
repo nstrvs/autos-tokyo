@@ -2,7 +2,7 @@
   "name": "autos-tokyo",
   "version": "1.0.0",
   "scripts": {
-    "build": "parcel build src/index.js --dist-dir dist"
+    "start": "parcel build src/index.js --dist-dir dist"
   },
   "repository": {
     "type": "git",
