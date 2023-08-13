@@ -1,0 +1,13 @@
+.co-buyer__wrapper {
+  width: 100%;
+  grid-column-gap: 0.5vw;
+  grid-row-gap: 0.5vw;
+  background-color: #fff;
+  border: 0.1vw solid #d8d8d8;
+  border-radius: 1vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2vw;
+  display: flex;
+}

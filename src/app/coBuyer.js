@@ -116,12 +116,12 @@ export function coBuyer() {
         <option value="Retired">Retired</option>
         <option value="Other">Other</option>
       </select>
-          <div id="co-buyer-employment-status__wrapper" class="employment-status__wrapper"></div>
-        </div>
-        <div id="co-buyer-add-income__section" class="co-buyer__wrapper">
-      <h2 class="heading-2">Would you like to add any additional income? (optional)</h2>
-      <div class="spacer-2"></div>
-      <div class="form__text-field-wrapper">
+      <div id="co-buyer-employment-status__wrapper" class="employment-status__wrapper"></div>
+      </div>
+      <div id="co-buyer-add-income__section" class="co-buyer__wrapper">
+        <h2 class="heading-2">Would you like to add any additional income? (optional)</h2>
+        <div class="spacer-2"></div>
+        <div class="form__text-field-wrapper">
         <div id="co-buyer-add-income" class="fontawesome h2 button">+</div>
         <div class="add-income__wrapper">
           <h3 class="heading-3">Add additional income *</h3>
@@ -144,13 +144,13 @@ export function coBuyer() {
   var yesRadio = document.getElementById('yes');
   var noRadio = document.getElementById('no');
 
-  yesRadio.addEventListener('change', function() {
+  yesRadio.addEventListener('change', function () {
     if (this.checked) {
       createDiv();
     }
   });
 
-  noRadio.addEventListener('change', function() {
+  noRadio.addEventListener('change', function () {
     if (this.checked) {
       removeDiv();
     }
@@ -161,104 +161,109 @@ export function coBuyerEmploymentStatus() {
   const coBuyerEmploymentStatus = document.getElementById('co-buyer-employment-status__select');
 
   function createDiv(content) {
-      var newDiv = document.createElement('div');
-      newDiv.id = 'co-buyer-employment-status__wrapper';
-      newDiv.className = 'co-buyer-employment-status__wrapper';
-      newDiv.innerHTML = content;
-      const container = document.getElementById('co-buyer-employment-status');
-      container.appendChild(newDiv);
+    var newDiv = document.createElement('div');
+    newDiv.id = 'co-buyer-employment-status__wrapper';
+    newDiv.className = 'co-buyer-employment-status__wrapper';
+    newDiv.innerHTML = content;
+    const container = document.getElementById('co-buyer-employment-status');
+    container.appendChild(newDiv);
   }
 
-  coBuyerEmploymentStatus.addEventListener('change', function() {
-      const wrapper = document.getElementById('co-buyer-employment-status__wrapper');
-      if (wrapper) {
-          wrapper.remove();
-      }
+  coBuyerEmploymentStatus.addEventListener('change', function () {
+    const wrapper = document.getElementById('co-buyer-employment-status__wrapper');
+    if (wrapper) {
+      wrapper.remove();
+    }
 
-      const selectedValue = this.value;
+    const selectedValue = this.value;
 
-      switch (selectedValue) {
-          case 'Employed':
-              let employedContent = `
-              <div class="form__text-field-wrapper">
-                <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="co-buyer-Employer-Name" required="">
-                <div class="date-field w-embed"><input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
-                `;
-              createDiv(employedContent);
-              break;
-          case 'Self-Employed':
-              let selfEmployedContent = `
-              <div class="form__text-field-wrapper">
-                <input type="text" class="text-field w-input" maxlength="256" name="Business Name" data-name="Business Name" placeholder="Business Name *" id="co-buyer-Business-Name" required="">
-                <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="co-buyer-Job-Title" required="">
-              </div>
-              <div class="form__text-field-wrapper">
+    switch (selectedValue) {
+    case 'Employed': {
+      let employedContent = `
+                <div class="form__text-field-wrapper">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="co-buyer-Employer-Name" required="">
+                  <div class="date-field w-embed"><input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
+                  `;
+      createDiv(employedContent);
+      break;
+    }
+    case 'Self-Employed': {
+      let selfEmployedContent = `
+                <div class="form__text-field-wrapper">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Business Name" data-name="Business Name" placeholder="Business Name *" id="co-buyer-Business-Name" required="">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="co-buyer-Job-Title" required="">
+                </div>
+                <div class="form__text-field-wrapper">
+                  <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income" required="">
+                  <div class="date-field w-embed">
+                    <input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
+                  </div>
+                </div> 
+                  `;
+      createDiv(selfEmployedContent);
+      break;
+    }
+    case 'Unemployed': {
+      let unemployedContent = `
                 <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income" required="">
-                <div class="date-field w-embed">
-                  <input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
+                  `;
+      createDiv(unemployedContent);
+      break;
+    }
+    case 'Retired': {
+      let retiredContent = `
+                <div class="form__text-field-wrapper">
+                  <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
+                    <option value="Income Source">Income Source *</option>
+                    <option value="Disability">Disability</option>
+                    <option value="Investment Income">Investment Income </option>
+                    <option value="Public Assistance">Public Assistance</option>
+                    <option value="Rental Income">Rental Income</option>
+                    <option value="Retired with Pension">Retired with Pension</option>
+                    <option value="Social Security">Social Security</option>
+                    <option value="Spousal Support">Spousal Support</option>
+                  </select>
+                  <div class="date-field w-embed">
+                    <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
+                  </div>
                 </div>
-              </div> 
-                `;
-              createDiv(selfEmployedContent);
-              break;
-          case 'Unemployed':
-              let unemployedContent = `
-              <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income" required="">
-                `;
-              createDiv(unemployedContent);
-              break;
-          case 'Retired':
-              let retiredContent = `
-              <div class="form__text-field-wrapper">
-                <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
-                  <option value="Income Source">Income Source *</option>
-                  <option value="Disability">Disability</option>
-                  <option value="Investment Income">Investment Income </option>
-                  <option value="Public Assistance">Public Assistance</option>
-                  <option value="Rental Income">Rental Income</option>
-                  <option value="Retired with Pension">Retired with Pension</option>
-                  <option value="Social Security">Social Security</option>
-                  <option value="Spousal Support">Spousal Support</option>
-                </select>
-                <div class="date-field w-embed">
-                  <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
+                <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income" required="">
+                  `;
+      createDiv(retiredContent);
+      break;
+    }
+    case 'Other': {
+      let otherContent = `
+                <div class="form__text-field-wrapper">
+                  <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
+                    <option value="Income Source">Income Source *</option>
+                    <option value="Child Support">Child Support</option>
+                    <option value="Disability">Disability</option>
+                    <option value="Investment Income">Investment Income </option>
+                    <option value="Public Assistance">Public Assistance</option>
+                    <option value="Rental Income">Rental Income</option>
+                    <option value="Retired with Pension">Retired with Pension</option>
+                    <option value="Social Security">Social Security</option>
+                    <option value="Spousal Support">Spousal Support</option>
+                    <option value="Unemployment Insurance">Unemployment Insurance</option>
+                  </select>
+                  <div class="date-field w-embed">
+                    <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
+                  </div>
                 </div>
-              </div>
-              <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income" required="">
-                `;
-              createDiv(retiredContent);
-              break;
-          case 'Other':
-              let otherContent = `
-              <div class="form__text-field-wrapper">
-                <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
-                  <option value="Income Source">Income Source *</option>
-                  <option value="Child Support">Child Support</option>
-                  <option value="Disability">Disability</option>
-                  <option value="Investment Income">Investment Income </option>
-                  <option value="Public Assistance">Public Assistance</option>
-                  <option value="Rental Income">Rental Income</option>
-                  <option value="Retired with Pension">Retired with Pension</option>
-                  <option value="Social Security">Social Security</option>
-                  <option value="Spousal Support">Spousal Support</option>
-                  <option value="Unemployment Insurance">Unemployment Insurance</option>
-                </select>
-                <div class="date-field w-embed">
-                  <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                </div>
-              </div>
-                `;
-              createDiv(otherContent);
-              break;
-      }
+                  `;
+      createDiv(otherContent);
+      break;
+    }
+    }    
   });
 }
 
 export function coBuyerAddIncome() {
-    const coBuyerAddIncomeButton = document.getElementById('add-income');
+  const coBuyerAddIncomeButton = document.getElementById('add-income');
   let serialNumber = 0;
   function createDiv(content) {
-      var newDiv = document.createElement('div');
+    var newDiv = document.createElement('div');
     newDiv.id = `Income-Source-${serialNumber}`;
     newDiv.className = 'form__text-field-wrapper';
     newDiv.innerHTML = content;
@@ -266,13 +271,13 @@ export function coBuyerAddIncome() {
     container.appendChild(newDiv);
     // Add an event listener to the remove button
     const removeIncomeButton = document.getElementById(`less-income-${serialNumber}`);
-    removeIncomeButton.addEventListener('click', function() {
-        container.removeChild(newDiv);
+    removeIncomeButton.addEventListener('click', function () {
+      container.removeChild(newDiv);
     });
     serialNumber++; // Increment the serial number after creating the div
   }
-  coBuyerAddIncomeButton.addEventListener('click', function() {
-      let content = `
+  coBuyerAddIncomeButton.addEventListener('click', function () {
+    let content = `
     <div id="co-buyer-less-income-${serialNumber}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
       <select id="co-buyer-Income-Source-${serialNumber}" name="Income Source" data-name="Income Source" required="" class="select w-select">

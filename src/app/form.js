@@ -2,33 +2,34 @@ export function employmentStatus() {
   const employmentStatus = document.getElementById('employment-status__select');
 
   function createDiv(content) {
-      var newDiv = document.createElement('div');
-      newDiv.id = 'employment-status__wrapper';
-      newDiv.className = 'employment-status__wrapper';
-      newDiv.innerHTML = content;
-      const container = document.getElementById('employment-status');
-      container.appendChild(newDiv);
+    var newDiv = document.createElement('div');
+    newDiv.id = 'employment-status__wrapper';
+    newDiv.className = 'employment-status__wrapper';
+    newDiv.innerHTML = content;
+    const container = document.getElementById('employment-status');
+    container.appendChild(newDiv);
   }
 
   employmentStatus.addEventListener('change', function() {
-      const wrapper = document.getElementById('employment-status__wrapper');
-      if (wrapper) {
-          wrapper.remove();
-      }
+    const wrapper = document.getElementById('employment-status__wrapper');
+    if (wrapper) {
+      wrapper.remove();
+    }
 
-      const selectedValue = this.value;
+    const selectedValue = this.value;
 
-      switch (selectedValue) {
-          case 'Employed':
-              let employedContent = `
+    switch (selectedValue) {
+    case 'Employed': {
+      let employedContent = `
               <div class="form__text-field-wrapper">
                 <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
                 <div class="date-field w-embed"><input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
                 `;
-              createDiv(employedContent);
-              break;
-          case 'Self-Employed':
-              let selfEmployedContent = `
+      createDiv(employedContent);
+      break;
+    }
+    case 'Self-Employed': {
+      let selfEmployedContent = `
               <div class="form__text-field-wrapper">
                 <input type="text" class="text-field w-input" maxlength="256" name="Business Name" data-name="Business Name" placeholder="Business Name *" id="Business-Name" required="">
                 <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
@@ -40,16 +41,18 @@ export function employmentStatus() {
                 </div>
               </div> 
                 `;
-              createDiv(selfEmployedContent);
-              break;
-          case 'Unemployed':
-              let unemployedContent = `
+      createDiv(selfEmployedContent);
+      break;
+    }
+    case 'Unemployed': {
+      let unemployedContent = `
               <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income" required="">
                 `;
-              createDiv(unemployedContent);
-              break;
-          case 'Retired':
-              let retiredContent = `
+      createDiv(unemployedContent);
+      break;
+    }
+    case 'Retired': {
+      let retiredContent = `
               <div class="form__text-field-wrapper">
                 <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                   <option value="Income Source">Income Source *</option>
@@ -67,10 +70,11 @@ export function employmentStatus() {
               </div>
               <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income" required="">
                 `;
-              createDiv(retiredContent);
-              break;
-          case 'Other':
-              let otherContent = `
+      createDiv(retiredContent);
+      break;
+    }
+    case 'Other': {
+      let otherContent = `
               <div class="form__text-field-wrapper">
                 <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                   <option value="Income Source">Income Source *</option>
@@ -89,9 +93,10 @@ export function employmentStatus() {
                 </div>
               </div>
                 `;
-              createDiv(otherContent);
-              break;
-      }
+      createDiv(otherContent);
+      break;
+    }
+    }
   });
 }
 
