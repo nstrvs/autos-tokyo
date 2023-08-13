@@ -11,5 +11,8 @@
   "devDependencies": {
     "eslint": "^8.47.0",
     "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.12"
   }
 }
