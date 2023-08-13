@@ -243,14 +243,14 @@ export function coBuyerEmploymentStatus() {
 }
 
 export function coBuyerAddIncome() {
-  const coBuyerAddIncomeButton = document.getElementById('add-income');
+  const coBuyerAddIncomeButton = document.getElementById('co-buyer-add-income');
   let serialNumber = 0;
   function createDiv(content) {
     var newDiv = document.createElement('div');
     newDiv.id = `Income-Source-${serialNumber}`;
     newDiv.className = 'form__text-field-wrapper';
     newDiv.innerHTML = content;
-    const container = document.getElementById('add-income__section');
+    const container = document.getElementById('co-buyer-add-income__section');
     container.appendChild(newDiv);
     // Add an event listener to the remove button
     const removeIncomeButton = document.getElementById(`less-income-${serialNumber}`);

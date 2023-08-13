@@ -244,7 +244,7 @@ var e,t;!function(){let e=document.getElementById("employment-status__select");f
                     <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                   </div>
                 </div>
-                  `)}})}(),function(){let e=document.getElementById("add-income"),t=0;e.addEventListener("click",function(){!function(e){var o=document.createElement("div");o.id=`Income-Source-${t}`,o.className="form__text-field-wrapper",o.innerHTML=e;let n=document.getElementById("add-income__section");n.appendChild(o);let i=document.getElementById(`less-income-${t}`);i.addEventListener("click",function(){n.removeChild(o)}),t++}(`
+                  `)}})}(),function(){let e=document.getElementById("co-buyer-add-income"),t=0;e.addEventListener("click",function(){!function(e){var o=document.createElement("div");o.id=`Income-Source-${t}`,o.className="form__text-field-wrapper",o.innerHTML=e;let n=document.getElementById("co-buyer-add-income__section");n.appendChild(o);let i=document.getElementById(`less-income-${t}`);i.addEventListener("click",function(){n.removeChild(o)}),t++}(`
     <div id="co-buyer-less-income-${t}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
       <select id="co-buyer-Income-Source-${t}" name="Income Source" data-name="Income Source" required="" class="select w-select">

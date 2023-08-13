@@ -7,3 +7,7 @@
   align-items: flex-start;
   display: flex;
 }
+
+.co-buyer-employment-status__wrapper {
+  width: 100%;
+}
