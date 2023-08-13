@@ -253,7 +253,7 @@ export function coBuyerAddIncome() {
     const container = document.getElementById('co-buyer-add-income__section');
     container.appendChild(newDiv);
     // Add an event listener to the remove button
-    const removeIncomeButton = document.getElementById(`less-income-${serialNumber}`);
+    const removeIncomeButton = document.getElementById(`co-buyer-less-income-${serialNumber}`);
     removeIncomeButton.addEventListener('click', function () {
       container.removeChild(newDiv);
     });
