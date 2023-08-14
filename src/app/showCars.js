@@ -1,12 +1,36 @@
 const fetch = require('node-fetch');
+require('dotenv').config();
+
+const ApiKey = process.env.WEBFLOW;
 
 export function showCars() {
+  function createImage(carName, featuredImage) {
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('car-image__wrapper');
+    newDiv.innerHTML = `<img src="${featuredImage}" alt="${carName}">`;
+    document.body.appendChild(newDiv);
+  }
+
+  function hoverListener(carName, featuredImage) { 
+    const carList = document.querySelectorAll('.cars-form_card');
+
+    carList.forEach((car) => {
+      car.addEventListener('mouseover', (e) => {
+        const carAttribute = e.target.getAttribute('car');
+
+        if (carAttribute == carName) {
+          createImage(carName, featuredImage);
+        }
+      });
+    });
+  }
+
   const url = 'https://api.webflow.com/collections/64c5869d5fc3ada54bf96c88/items';
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      authorization: 'Bearer 8bc43749e38f685f5408750d22123bde0a15b0cc22557253fe12793763a02374',
+      authorization: `Bearer ${ApiKey}`,
     },
   };
 
@@ -16,33 +40,14 @@ export function showCars() {
       // Extract the items array
       const items = json.items;
 
-      // Create a new array with the required properties
-      const result = items.map((item) => {
-        return {
-          name: item.name,
-          frontPageImage: item['front-page-image'].url,
-        };
-      });
-      result.forEach (item => {
-        const name = item.name;
-        const carList = document.querySelectorAll(`#${name}`);
-        carList.forEach((car) => {
-          car.addEventListener('mouseenter', () => {
-        });
-      });
+      items.forEach((item) => {
+        const carName = item.name;
+        const featuredImage = item.featuredImage; // Make sure 'featuredImage' is the correct key in the response
 
-      console.log(result);
+        hoverListener(carName, featuredImage);
+      });
+    
+      console.log(items);
     })
     .catch((err) => console.error('error:' + err));
-  
-    function createImage(featuredImage, carName) {
-      const newDiv = document.createElement('div');
-      newDiv.classList.add('car-image__wrapper');
-      newDiv.innerHTML = `<img src="${featuredImage}" alt="${carName}">`;
-      document.body.appendChild(newDiv);
-    }
-
-    
 }
-
-showCars();

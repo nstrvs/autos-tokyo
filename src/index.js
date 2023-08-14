@@ -1,7 +1,7 @@
 import './index.css';
 import { employmentStatus, addIncome } from './app/form.js';
 import { coBuyer, coBuyerEmploymentStatus, coBuyerAddIncome, removeDiv } from './app/coBuyer.js';
-import { showCars} from './app/showCars';
+import { showCars } from './app/showCars';
 
 
 employmentStatus();

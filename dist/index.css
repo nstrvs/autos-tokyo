@@ -1,2 +1,2 @@
-.co-buyer__wrapper{grid-column-gap:.5vw;grid-row-gap:.5vw;flex-direction:column;justify-content:flex-start;align-items:flex-start;width:100%;display:flex}.co-buyer-employment-status__wrapper{width:100%}
+.co-buyer__wrapper{grid-column-gap:.5vw;grid-row-gap:.5vw;flex-direction:column;justify-content:flex-start;align-items:flex-start;width:100%;display:flex}.co-buyer-employment-status__wrapper{width:100%}.car-image__wrapper{z-index:999;justify-content:center;align-items:center;width:100vw;height:100vh;display:flex;position:fixed;top:0;left:0}.car-image__wrapper img{object-fit:cover;width:32vw;height:18vw}
 /*# sourceMappingURL=index.css.map */
