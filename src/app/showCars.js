@@ -26,16 +26,16 @@ export function showCars() {
       // Extract the items array
       const items = json.items;
 
-      const carName = [];
-      const featuredImage = [];
+      let carName = [];
+      let featuredImage = [];
 
       for (let i = 0; i < items.length; i++) {
-        carName = items[i].name;
-        featuredImage = items[i]['front-page-image'].url;
+        carName = carName + items[i].name;
+        featuredImage = carName + items[i]['front-page-image'].url;
     
         console.log(carName, featuredImage);
       }
-      
+
     })
     .catch((err) => console.error('error:' + err));
 }
