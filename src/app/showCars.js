@@ -25,7 +25,7 @@ export function showCars() {
     });
   }
 
-  fetch('https://autos-tokyo-2.vercel.app/fetch-cars')
+  fetch('https://autos-tokyo.vercel.app/fetch-cars')
   .then((res) => res.json())
   .then((json) => {
       // Extract the items array
