@@ -1,8 +1,3 @@
-const fetch = require('node-fetch');
-require('dotenv').config();
-
-const ApiKey = process.env.WEBFLOW;
-
 export function showCars() {
   function createImage(carName, featuredImage) {
     const newDiv = document.createElement('div');
@@ -17,8 +12,10 @@ export function showCars() {
     carList.forEach((car) => {
       car.addEventListener('mouseover', (e) => {
         const carAttribute = e.target.getAttribute('car');
+        console.log(carAttribute);
 
         if (carAttribute == carName) {
+          console.log(carName, featuredImage);
           createImage(carName, featuredImage);
         }
       });
