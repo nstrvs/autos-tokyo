@@ -13,9 +13,9 @@ export function showCars() {
     carList.forEach((car) => {
       car.addEventListener('mouseover', (e) => {
         const carAttribute = e.target.getAttribute('car');
-        
+
         if (carAttribute == carName) {
-          console.log(carName, featuredImage);
+          createImage(carName, featuredImage);
          }
 
       });
