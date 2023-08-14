@@ -1,4 +1,5 @@
 export function showCars() {
+  const images = [];
 
   function createImage(carName, featuredImage) {
     const newDiv = document.createElement('div');
@@ -16,7 +17,7 @@ export function showCars() {
 
         if (carAttribute == carName) {
           createImage(carName, featuredImage);
-         }
+        }
       });
 
       car.addEventListener('mouseout', (e) => {
@@ -36,16 +37,19 @@ export function showCars() {
       // Extract the items array
       const items = json.items;
 
-      const carName = [];
-      const featuredImage = [];
-
       for (let i = 0; i < items.length; i++) {
-        carName.push(items[i].name);
-        featuredImage.push(items[i]['front-page-image'].url);
-    
-        hoverListener(carName[i], featuredImage[i]);
-      }
+        const carName = items[i].name;
+        const featuredImage = items[i]['front-page-image'].url;
 
+        // Preload the image by creating an Image object and setting its src attribute
+        const img = new Image();
+        img.src = featuredImage;
+
+        // Add the preloaded image to the images array
+        images.push(img);
+
+        hoverListener(carName, featuredImage);
+      }
     })
     .catch((err) => console.error('error:' + err));
 }
