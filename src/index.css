@@ -3,12 +3,18 @@ input[type="text" i] {
   font-size: .8vw;
   font-weight: 600;
   line-height: 1vw;
+  color: #727272;
 }
 
 input[type="date"]:focus {
   outline: none;
   border: 0;
   text-transform: uppercase;
+  font-family: aktiv-grotesk,sans-serif;
+  font-size: .8vw;
+  font-weight: 600;
+  line-height: 1vw;
+  color: #727272;
 }
 
 
