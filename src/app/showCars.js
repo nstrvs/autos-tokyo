@@ -14,7 +14,7 @@ export function showCars() {
         const carAttribute = e.target.getAttribute('car');
 
         if (carAttribute == carName) {
-          console.log(carName);
+          createImage(carName, featuredImage);
         }
       });
     });
@@ -33,7 +33,7 @@ export function showCars() {
         carName.push(items[i].name);
         featuredImage.push(items[i]['front-page-image'].url);
     
-        console.log(carName[i], featuredImage[i]);
+        hoverListener(carName[i], featuredImage[i]);
       }
 
     })
