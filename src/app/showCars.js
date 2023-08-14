@@ -12,11 +12,9 @@ export function showCars() {
     carList.forEach((car) => {
       car.addEventListener('mouseover', (e) => {
         const carAttribute = e.target.getAttribute('car');
-        console.log(carAttribute);
 
         if (carAttribute == carName) {
-          console.log(carName, featuredImage);
-          createImage(carName, featuredImage);
+          console.log(carName);
         }
       });
     });
@@ -30,9 +28,8 @@ export function showCars() {
 
       items.forEach((item) => {
         const carName = item.name;
-        const featuredImage = item.featuredImage; // Make sure 'featuredImage' is the correct key in the response
 
-        hoverListener(carName, featuredImage);
+        hoverListener(carName);
       });
     
       console.log(items);
