@@ -1,4 +1,5 @@
 export function showCars() {
+
   function createImage(carName, featuredImage) {
     const newDiv = document.createElement('div');
     newDiv.classList.add('car-image__wrapper');
@@ -12,11 +13,10 @@ export function showCars() {
     carList.forEach((car) => {
       car.addEventListener('mouseover', (e) => {
         const carAttribute = e.target.getAttribute('car');
-        console.log(carAttribute);
-
-        /* if (carAttribute == carName) {
+        
+        if (carAttribute == carName) {
           console.log(carName, featuredImage);
-         }*/
+         }
 
       });
     });
