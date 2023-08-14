@@ -26,13 +26,10 @@ export function showCars() {
       // Extract the items array
       const items = json.items;
 
-      items.forEach((item) => {
-        const carName = item.name;
-
-        hoverListener(carName);
-      });
+      const carName = items[0].name;
+      const featuredImage = items[0]['front-page-image'].url;
     
-      console.log(items);
+      console.log(carName, featuredImage);
     })
     .catch((err) => console.error('error:' + err));
 }
