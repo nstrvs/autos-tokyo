@@ -14,7 +14,7 @@ export function showCars() {
         const carAttribute = e.target.getAttribute('car');
 
         if (carAttribute == carName) {
-          createImage(carName, featuredImage);
+          console.log(carName, featuredImage);
         }
       });
     });
