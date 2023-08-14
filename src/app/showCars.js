@@ -12,10 +12,12 @@ export function showCars() {
     carList.forEach((car) => {
       car.addEventListener('mouseover', (e) => {
         const carAttribute = e.target.getAttribute('car');
+        console.log(carAttribute);
 
-        if (carAttribute == carName) {
+        /* if (carAttribute == carName) {
           console.log(carName, featuredImage);
-        }
+         }*/
+
       });
     });
   }
