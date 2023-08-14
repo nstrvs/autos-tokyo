@@ -5,31 +5,7 @@ input[type="text"]::-webkit-input-placeholder {
   line-height: 1vw;
 }
 
-/* Optionally, you can provide similar rules for other browsers */
-input[type="text"]::-moz-placeholder {
-  font-family: aktiv-grotesk,sans-serif;
-  font-size: .8vw;
-  font-weight: 600;
-  line-height: 1vw;
-}
-
-input[type="text"]:-ms-input-placeholder {
-  font-family: aktiv-grotesk,sans-serif;
-  font-size: .8vw;
-  font-weight: 600;
-  line-height: 1vw;
-}
-
-input[type="date"]::-webkit-input-placeholder {
-  border: 0;
-}
-
-/* Optionally, you can provide similar rules for other browsers */
-input[type="date"]::-moz-placeholder {
-  border: 0;
-}
-
-input[type="date"]:-ms-input-placeholder {
+input[type="date"]::-webkit-datetime-edit {
   border: 0;
 }
 
