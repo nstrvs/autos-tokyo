@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 
 export function buttonsAnimation() {
-  let buttons = document.querySelectorAll('.button');
+  let buttons = document.querySelectorAll('.button .submit-button');
 
   buttons.forEach((button) => {
     button.addEventListener('mouseenter', () => {
