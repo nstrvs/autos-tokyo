@@ -1,3 +1,5 @@
+import { buttonsAnimation } from "./hoverAnimations";
+
 export function coBuyer() {
   var newDiv = document.createElement('div');
   newDiv.id = 'co-buyer__sibling';
@@ -278,6 +280,7 @@ export function coBuyerAddIncome() {
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="co-buyer-Annual-Income-${serialNumber}" required="">
     `;
     createDiv(content);
+    buttonsAnimation();
   }
   );
 }

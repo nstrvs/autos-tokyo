@@ -1,3 +1,5 @@
+import { buttonsAnimation } from "./hoverAnimations";
+
 export function employmentStatus() {
   const employmentStatus = document.getElementById('employment-status__select');
 
@@ -140,5 +142,6 @@ export function addIncome() {
       <input type="number" class="text-field w-input" maxlength="256" name="Annual Income" data-name="Annual Income" placeholder="Annual Income *" id="Annual-Income-${serialNumber}" required="">
     `;
     createDiv(content);
+    buttonsAnimation();
   });
 }
