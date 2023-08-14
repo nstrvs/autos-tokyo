@@ -17,7 +17,15 @@ export function showCars() {
         if (carAttribute == carName) {
           createImage(carName, featuredImage);
          }
+      });
 
+      car.addEventListener('mouseout', (e) => {
+        const carAttribute = e.target.getAttribute('car');
+
+        if (carAttribute == carName) {
+          const carImage = document.querySelector('.car-image__wrapper');
+          carImage.remove();
+        }
       });
     });
   }
