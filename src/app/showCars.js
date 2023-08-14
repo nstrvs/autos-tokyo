@@ -25,16 +25,7 @@ export function showCars() {
     });
   }
 
-  const url = 'https://api.webflow.com/collections/64c5869d5fc3ada54bf96c88/items';
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      authorization: `Bearer ${ApiKey}`,
-    },
-  };
-
-  fetch(url, options)
+  fetch('/fetch-cars')
     .then((res) => res.json())
     .then((json) => {
       // Extract the items array
