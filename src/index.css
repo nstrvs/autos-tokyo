@@ -5,9 +5,11 @@ input[type="text"]::-webkit-input-placeholder {
   line-height: 1vw;
 }
 
-input[type="date"]::-webkit-datetime-edit {
+input[type="date"]:focus {
+  outline: none;
   border: 0;
 }
+
 
 .co-buyer__wrapper {
   width: 100%;
