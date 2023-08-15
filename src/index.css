@@ -58,7 +58,7 @@ input[type="date"]:focus {
   }
 
   .co-buyer__wrapper {
-    grid-column-gap: 2.5vw;
+    grid-column-gap: 1vw;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
