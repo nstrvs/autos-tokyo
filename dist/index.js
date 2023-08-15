@@ -50,7 +50,7 @@
                   <input id="retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                 </div>
               </div>
-                `)}})}(),function(){let t=document.getElementById("add-income"),e=0;t.addEventListener("click",function(){(function(t){var i=document.createElement("div");i.id=`Income-Source-${e}`,i.className="form__text-field-wrapper",i.innerHTML=t;let n=document.getElementById("add-income__section");n.appendChild(i);let r=document.getElementById(`less-income-${e}`);r.addEventListener("click",function(){n.removeChild(i)}),e++})(`
+                `)}})}(),function(){let t=document.getElementById("add-income"),e=0;t.addEventListener("click",function(){(function(t){var i=document.createElement("div");i.id=`Income-Source-${e}`,i.className="form__text-field-wrapper .add__income",i.innerHTML=t;let n=document.getElementById("add-income__section");n.appendChild(i);let r=document.getElementById(`less-income-${e}`);r.addEventListener("click",function(){n.removeChild(i)}),e++})(`
     <div id="less-income-${e}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
       <select id="Income-Source-${e}" name="Income Source" data-name="Income Source" required="" class="select w-select">
@@ -244,7 +244,7 @@
                     <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
                   </div>
                 </div>
-                  `)}})}(),function(){let t=document.getElementById("co-buyer-add-income"),e=0;t.addEventListener("click",function(){(function(t){var i=document.createElement("div");i.id=`Income-Source-${e}`,i.className="form__text-field-wrapper",i.innerHTML=t;let n=document.getElementById("co-buyer-add-income__section");n.appendChild(i);let r=document.getElementById(`co-buyer-less-income-${e}`);r.addEventListener("click",function(){n.removeChild(i)}),e++})(`
+                  `)}})}(),function(){let t=document.getElementById("co-buyer-add-income"),e=0;t.addEventListener("click",function(){(function(t){var i=document.createElement("div");i.id=`Income-Source-${e}`,i.className="form__text-field-wrapper .add__income",i.innerHTML=t;let n=document.getElementById("co-buyer-add-income__section");n.appendChild(i);let r=document.getElementById(`co-buyer-less-income-${e}`);r.addEventListener("click",function(){n.removeChild(i)}),e++})(`
     <div id="co-buyer-less-income-${e}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
       <select id="co-buyer-Income-Source-${e}" name="Income Source" data-name="Income Source" required="" class="select w-select">
