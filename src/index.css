@@ -58,11 +58,11 @@ input[type="date"]:focus {
   }
 
   .co-buyer__wrapper {
-    grid-column-gap: 2vw;
+    grid-column-gap: 2.5vw;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 3vw;
+    padding: 3.5vw 3vw;
   }
 
   .co-buyer__sibling {
