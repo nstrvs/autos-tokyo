@@ -109,7 +109,7 @@ export function addIncome() {
   function createDiv(content) {
     var newDiv = document.createElement('div');
     newDiv.id = `Income-Source-${serialNumber}`;
-    newDiv.className = 'form__text-field-wrapper .add__income';
+    newDiv.className = 'form__text-field-wrapper add__income';
     newDiv.innerHTML = content;
     const container = document.getElementById('add-income__section');
     container.appendChild(newDiv);
