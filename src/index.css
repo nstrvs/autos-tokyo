@@ -37,21 +37,21 @@ input[type="date"]:focus {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1920px) {
+@media only screen and (min-width: 1920px) {
   .car-image__wrapper img {
     width: 600px;
     height: 350px;
   }
 }
 
-@media screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   .car-image__wrapper img {
     width: 46vw;
     height: 23vw;
   }
 }
 
-@media screen and (max-width: 478px) {
+@media only screen and (max-width: 478px) {
   .car-image__wrapper img {
     width: 60vw;
     height: 30vw;
