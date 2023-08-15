@@ -122,7 +122,7 @@ export function coBuyer() {
       <div id="co-buyer-add-income__section" class="co-buyer__wrapper">
         <h2 class="heading-2">Would you like to add any additional income? (optional)</h2>
         <div class="spacer-2"></div>
-        <div class="form__text-field-wrapper">
+        <div class="form__text-field-wrapper add__income">
         <div id="co-buyer-add-income" class="fontawesome h2 button">+</div>
         <div class="add-income__wrapper">
           <h3 class="heading-3">Add additional income *</h3>
