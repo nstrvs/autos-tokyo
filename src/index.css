@@ -66,6 +66,6 @@ input[type="date"]:focus {
   }
 
   .co-buyer__sibling {
-    grid-column-gap: 0;
+    grid-row-gap: 0;
   }
 }
