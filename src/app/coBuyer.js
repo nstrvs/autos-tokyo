@@ -8,7 +8,7 @@ export function coBuyer() {
     <div class="co-buyer__wrapper">
       <h2 class="heading-2">Let's get some info from your co‑buyer</h2>
       <div class="form__text-field-wrapper">
-        <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Name *" id="co-buyer-Name" required="">
+        <input type="text" class="text-field w-input" maxlength="256" name="co-buyer name" data-name="Name" placeholder="Name *" id="co-buyer-Name" required="">
         <input type="text" class="text-field w-input" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Last Name *" id="co-buyer-Last-Name" required="">
       </div>
       <div class="form__text-field-wrapper">
@@ -92,18 +92,17 @@ export function coBuyer() {
       </div>
       <div class="form__text-field-wrapper">
         <input type="number" class="text-field w-input" maxlength="256" name="Zip-Code" data-name="Zip Code" placeholder="ZIP Code *" id="co-buyer-Zip-Code" required="">
-        <div class="date-field w-embed">
-          <input id="co-buyer-move-in-date" name="move-in-date" type="text" class="form__date" placeholder="Move-In Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-        </div>
+        <div class="form__text-field-caption"> 
+          <p class="paragraph margin-left margin-top">co-buyer__move-in-date-Date *</p><div class="text-field__wrapper margin-top"><input type="text" class="text-field w-input" maxlength="256" name="co-buyer__move-in-date-date__months" data-name="co-buyer__move-in-date-date__months" placeholder="MM" id="co-buyer__move-in-date-date__months-2" required=""><div class="text-block dash">/</div><input type="text" class="text-field w-input" maxlength="256" name="co-buyer__move-in-date-date__years-3" data-name="Move In Date Years 3" placeholder="YYYY" id="co-buyer__move-in-date-date__years-3" required=""></div></div>
       </div>
       <div class="form__text-field-wrapper">
-        <select id="co-buyer-Housing-Status" name="Housing-Status" data-name="Housing Status" required="" class="select w-select">
+        <select id="co-buyer-Housing-Status" name="Housing-Status" data-name="Co-BuyerHousing Status" required="" class="select w-select">
           <option value="Housing Status">Housing Status *</option>
           <option value="Own or Mortgage">Own or Mortgage</option>
           <option value="Rent or Lease">Rent or Lease</option>
           <option value="Other">Other</option>
         </select>
-        <input type="number" class="text-field w-input" maxlength="256" name="House-Monthly-Payment" data-name="House Monthly Payment" placeholder="Monthly Payment *" id="co-buyer-House-Monthly-Payment" required="">
+        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer House-Monthly-Payment" data-name="House Monthly Payment" placeholder="Monthly Payment *" id="co-buyer-House-Monthly-Payment" required="">
       </div>
     </div>
     <div id="co-buyer-employment-status" class="co-buyer__wrapper">
