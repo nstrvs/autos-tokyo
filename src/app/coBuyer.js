@@ -93,7 +93,7 @@ export function coBuyer() {
       <div class="form__text-field-wrapper">
         <input type="number" class="text-field w-input" maxlength="256" name="Zip-Code" data-name="Zip Code" placeholder="ZIP Code *" id="co-buyer-Zip-Code" required="">
         <div class="form__text-field-caption"> 
-          <p class="paragraph margin-left margin-top">co-buyer__move-in-date-Date *</p><div class="text-field__wrapper margin-top"><input type="text" class="text-field w-input" maxlength="256" name="co-buyer__move-in-date-date__months" data-name="co-buyer__move-in-date-date__months" placeholder="MM" id="co-buyer__move-in-date-date__months-2" required=""><div class="text-block dash">/</div><input type="text" class="text-field w-input" maxlength="256" name="co-buyer__move-in-date-date__years-3" data-name="Move In Date Years 3" placeholder="YYYY" id="co-buyer__move-in-date-date__years-3" required=""></div></div>
+          <p class="paragraph margin-left margin-top">Move-in-Date *</p><div class="text-field__wrapper margin-top"><input type="text" class="text-field w-input" maxlength="256" name="co-buyer__move-in-date-date__months" data-name="co-buyer__move-in-date-date__months" placeholder="MM" id="co-buyer__move-in-date-date__months-2" required=""><div class="text-block dash">/</div><input type="text" class="text-field w-input" maxlength="256" name="co-buyer__move-in-date-date__years-3" data-name="Move In Date Years 3" placeholder="YYYY" id="co-buyer__move-in-date-date__years-3" required=""></div></div>
       </div>
       <div class="form__text-field-wrapper">
         <select id="co-buyer-Housing-Status" name="Housing-Status" data-name="Co-BuyerHousing Status" required="" class="select w-select">
