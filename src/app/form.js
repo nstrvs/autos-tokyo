@@ -23,13 +23,24 @@ export function employmentStatus() {
     switch (selectedValue) {
     case 'Employed': {
       let employedContent = `
+                  <div class="form__text-field-wrapper">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
+                  <div class="form__text-field-caption">
+                      <p class="paragraph margin-left margin-top">Start Date *</p>
+                      <div class="text-field__wrapper margin-top">
+                          <input type="text" class="text-field w-input" maxlength="256" name="start-date__months" data-name="start-date__months" placeholder="MM" id="start-date__months-2" required="">
+                          <div class="text-block dash">/</div>
+                          <input type="text" class="text-field w-input" maxlength="256" name="start-date__years" data-name="Move In Date Years" placeholder="YYYY" id="start-date__years-3" required="">
+                      </div>
+                  </div>
+              </div>
               <div class="form__text-field-wrapper">
-                <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
-                <div class="form__text-field-caption"><p class="paragraph margin-left margin-top">Start Date *</p><div class="text-field__wrapper margin-top"><input type="text" class="text-field w-input" maxlength="256" name="start-date__months" data-name="start-date__months" placeholder="MM" id="start-date__months-2" required=""><div class="text-block dash">/</div><input type="text" class="text-field w-input" maxlength="256" name="start-date__years" data-name="Move In Date Years" placeholder="YYYY" id="start-date__years-3" required=""></div></div>
-              <div class="form__text-field-wrapper">
-                <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Employer Name" placeholder="Job Title *" id="Job-Title" required="">
-                <div class="date-field w-embed">
-                <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly Income" required=""> 
+                  <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
+                  <div class="date-field w-embed">
+                      <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly-Income" required="">
+                  </div>
+              </div>
+   
                 `;
       createDiv(employedContent);
       break;
