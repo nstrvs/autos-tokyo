@@ -166,8 +166,22 @@ export function coBuyerEmploymentStatus() {
     case 'Employed': {
       let employedContent = `
                 <div class="form__text-field-wrapper">
-                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="co-buyer-Employer-Name" required="">
-                  <div class="date-field w-embed"><input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')"></div></div> 
+                    <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Name" data-name="Co-Buyer Employer Name" placeholder="Employer Name *" id="Co-Buyer-Employer-Name" required="">
+                    <div class="form__text-field-caption">
+                        <p class="paragraph margin-left margin-top">Start Date *</p>
+                        <div class="text-field__wrapper margin-top">
+                            <input type="text" class="text-field w-input" maxlength="256" name="co-buyer-start-date__months" data-name="co-buyer-start-date__months" placeholder="MM" id="start-date__months-2" required="">
+                            <div class="text-block dash">/</div>
+                            <input type="text" class="text-field w-input" maxlength="256" name="co-buyer-start-date__years" data-name="Co-Buyer Move In Date Years" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form__text-field-wrapper">
+                    <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Job Title" data-name="Job Title" placeholder="Job Title *" id="Co-Buyer-Job-Title" required="">
+                    <div class="date-field w-embed">
+                        <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Co-Buyer Monthly Income" placeholder="Monthly Income *" id="Co-Buyer-Monthly-Income" required="">
+                    </div>
+                </div> 
                   `;
       createDiv(employedContent);
       break;
