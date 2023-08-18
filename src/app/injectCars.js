@@ -21,7 +21,7 @@ export function injectCars() {
   }
   
   function handlePosition(featuredImage) {
-    document.addEventListener('mousemove', (featuredImage) => { 
+    document.addEventListener('mousemove', (e) => { 
       featuredImage.style.top = `${e.clientY}px`;
       featuredImage.style.left = `${e.clientX}px`;
     });
