@@ -28,9 +28,9 @@ export function employmentStatus() {
                   <div class="form__text-field-caption">
                       <p class="paragraph margin-left margin-top">Start Date *</p>
                       <div class="text-field__wrapper margin-top">
-                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Months)" data-name="Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Start Date (Months)" data-name="Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
                           <div class="text-block dash">/</div>
-                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
                       </div>
                   </div>
               </div>
@@ -56,9 +56,9 @@ export function employmentStatus() {
                 <div class="form__text-field-caption">
                       <p class="paragraph margin-left margin-top">Start Date *</p>
                       <div class="text-field__wrapper margin-top">
-                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Months)" data-name="Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Start Date (Months)" data-name="Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
                           <div class="text-block dash">/</div>
-                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
                       </div>
                   </div>
               </div> 
@@ -89,9 +89,9 @@ export function employmentStatus() {
                 <div class="form__text-field-caption">
                       <p class="paragraph margin-left margin-top">Retired Since *</p>
                       <div class="text-field__wrapper margin-top">
-                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Months)" data-name="Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Retired Since (Months)" data-name="Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
                           <div class="text-block dash">/</div>
-                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Years)" data-name="Retired Since (Years)" placeholder="YYYY" id="start-date__years-3" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Retired Since (Years)" data-name="Retired Since (Years)" placeholder="YYYY" id="start-date__years-3" required="">
                       </div>
                   </div>
               </div>
@@ -118,9 +118,9 @@ export function employmentStatus() {
                 <div class="form__text-field-caption">
                       <p class="paragraph margin-left margin-top">Retired Since *</p>
                       <div class="text-field__wrapper margin-top">
-                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Months)" data-name="Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Retired Since (Months)" data-name="Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
                           <div class="text-block dash">/</div>
-                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Years)" data-name="Retired Since (Years)" placeholder="YYYY" id="start-date__years-3" required="">
+                          <input type="number" class="text-field w-input" maxlength="256" name="Retired Since (Years)" data-name="Retired Since (Years)" placeholder="YYYY" id="start-date__years-3" required="">
                       </div>
                   </div>
               </div>

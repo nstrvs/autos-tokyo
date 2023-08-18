@@ -93,7 +93,7 @@ export function coBuyer() {
       <div class="form__text-field-wrapper">
         <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Zip-Code" data-name="Co-Buyer Zip-Code" placeholder="ZIP Code *" id="co-buyer-zip-code" required="">
         <div class="form__text-field-caption"> 
-          <p class="paragraph margin-left margin-top">Move-in-Date *</p><div class="text-field__wrapper margin-top"><input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Move-in-Date (Months)" data-name="Co-Buyer Move-in-Date (Months)" placeholder="MM" id="co-buyer__move-in-date__months" required=""><div class="text-block dash">/</div><input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Move-in-Date (Years)" data-name="Co-Buyer Move-in-Date (Years)" placeholder="YYYY" id="co-buyer__move-in-date__years" required=""></div></div>
+          <p class="paragraph margin-left margin-top">Move-in-Date *</p><div class="text-field__wrapper margin-top"><input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Move-in-Date (Months)" data-name="Co-Buyer Move-in-Date (Months)" placeholder="MM" id="co-buyer__move-in-date__months" required=""><div class="text-block dash">/</div><input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Move-in-Date (Years)" data-name="Co-Buyer Move-in-Date (Years)" placeholder="YYYY" id="co-buyer__move-in-date__years" required=""></div></div>
       </div>
       <div class="form__text-field-wrapper">
         <select id="co-buyer-housing-status" name="Co-Buyer Housing Status" data-name="Co-Buyer Housing Status" required="" class="select w-select">
@@ -169,9 +169,9 @@ export function coBuyerEmploymentStatus() {
                     <div class="form__text-field-caption">
                         <p class="paragraph margin-left margin-top">Start Date *</p>
                         <div class="text-field__wrapper margin-top">
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Months)" data-name="Co-Buyer Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Months)" data-name="Co-Buyer Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
                             <div class="text-block dash">/</div>
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Years)" data-name="Co-Buyer Start Date (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Years)" data-name="Co-Buyer Start Date (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
                         </div>
                     </div>
                 </div>
@@ -196,9 +196,9 @@ export function coBuyerEmploymentStatus() {
                   <div class="form__text-field-caption">
                         <p class="paragraph margin-left margin-top">Start Date *</p>
                         <div class="text-field__wrapper margin-top">
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Months)" data-name="Co-Buyer Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Months)" data-name="Co-Buyer Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
                             <div class="text-block dash">/</div>
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Years)" data-name="Co-Buyer Start Date (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Years)" data-name="Co-Buyer Start Date (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
                         </div>
                     </div>
                 </div> 
@@ -229,9 +229,9 @@ export function coBuyerEmploymentStatus() {
                   <div class="form__text-field-caption">
                         <p class="paragraph margin-left margin-top">Retired Since *</p>
                         <div class="text-field__wrapper margin-top">
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Months)" data-name="Co-Buyer Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Months)" data-name="Co-Buyer Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
                             <div class="text-block dash">/</div>
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Years)" data-name="Co-Buyer Retired Since (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Years)" data-name="Co-Buyer Retired Since (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
                         </div>
                     </div>
                 </div>
@@ -258,9 +258,9 @@ export function coBuyerEmploymentStatus() {
                   <div class="form__text-field-caption">
                         <p class="paragraph margin-left margin-top">Retired Since *</p>
                         <div class="text-field__wrapper margin-top">
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Months)" data-name="Co-Buyer Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Months)" data-name="Co-Buyer Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
                             <div class="text-block dash">/</div>
-                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Years)" data-name="Co-Buyer Retired Since (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Years)" data-name="Co-Buyer Retired Since (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
                         </div>
                     </div>
                 </div>
