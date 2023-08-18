@@ -8,13 +8,13 @@ export function coBuyer() {
     <div class="co-buyer__wrapper">
       <h2 class="heading-2">Let's get some info from your co‑buyer</h2>
       <div class="form__text-field-wrapper">
-        <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Name" data-name="Co-Buyer name" placeholder="Name *" id="co-buyer-name" required="">
+        <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Name" data-name="Co-Buyer Name" placeholder="Name *" id="co-buyer-name" required="">
         <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Last Name" data-name="Co-Buyer Last Name" placeholder="Last Name *" id="co-buyer-last-name" required="">
       </div>
       <div class="form__text-field-wrapper">
         <input type="email" class="text-field w-input" maxlength="256" name="Co-Buyer Email" data-name="Co-Buyer Email" placeholder="Email *" id="co-buyer-email" required="">
         <div class="date-field w-embed">
-          <input id="co-buyer-date-of-birth" name="Co-Buyer Date of Birth" type="text" class="form__date" placeholder="Date of Birth *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
+          <input id="co-buyer-date-of-birth" name="Co-Buyer Date of Birth" data-name="Co-Buyer Date of Birth" type="text" class="form__date" placeholder="Date of Birth *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
         </div>
       </div>
       <div class="form__text-field-wrapper">
@@ -23,7 +23,7 @@ export function coBuyer() {
           <p class="paragraph">Phone number required to pre-qualify and to provide you with updates. <br>You can see our <a href="/utils/terms" target="_blank" class="link">Terms</a>.</p>
         </div>
         <div class="form__text-field-caption">
-          <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer SSN-ITIN" data-name="Co-Buyer SSN ITIN" placeholder="SSN / ITIN *" id="co-buyer-SSN-ITIN" required="">
+          <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer SSN-ITIN" data-name="Co-Buyer SSN-ITIN" placeholder="SSN / ITIN *" id="co-buyer-SSN-ITIN" required="">
           <p class="paragraph">This won't impact your credit score. Please see our <a href="/utils/privacy" target="_blank" class="link">Privacy Policy</a>.</p>
         </div>
       </div>
@@ -35,7 +35,7 @@ export function coBuyer() {
         <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Apartment" data-name="Co-Buyer Apartment" placeholder="Apartment / suite / etc" id="co-buyer-apartment">
       </div>
       <div class="form__text-field-wrapper">
-        <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer City" data-name="City" placeholder="City *" id="co-buyer-city" required="">
+        <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer City" data-name="Co-Buyer City" placeholder="City *" id="co-buyer-city" required="">
         <select id="co-buyer-state" name="Co-Buyer State" data-name="Co-Buyer State" required="" class="select w-select">
           <option value="State">State *</option>
           <option value="Alabama">Alabama</option>
@@ -91,7 +91,7 @@ export function coBuyer() {
         </select>
       </div>
       <div class="form__text-field-wrapper">
-        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Zip-Code" data-name="Co-Buyer Zip Code" placeholder="ZIP Code *" id="co-buyer-zip-code" required="">
+        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Zip-Code" data-name="Co-Buyer Zip-Code" placeholder="ZIP Code *" id="co-buyer-zip-code" required="">
         <div class="form__text-field-caption"> 
           <p class="paragraph margin-left margin-top">Move-in-Date *</p><div class="text-field__wrapper margin-top"><input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Move-in-Date (Months)" data-name="Co-Buyer Move-in-Date (Months)" placeholder="MM" id="co-buyer__move-in-date__months" required=""><div class="text-block dash">/</div><input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Move-in-Date (Years)" data-name="Co-Buyer Move-in-Date (Years)" placeholder="YYYY" id="co-buyer__move-in-date__years" required=""></div></div>
       </div>
@@ -102,7 +102,7 @@ export function coBuyer() {
           <option value="Rent or Lease">Rent or Lease</option>
           <option value="Other">Other</option>
         </select>
-        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer House-Monthly-Payment" data-name="Co-Buyer House Monthly Payment" placeholder="Monthly Payment *" id="co-buyer-house-monthly-payment" required="">
+        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer House-Monthly-Payment" data-name="Co-Buyer House-Monthly-Payment" placeholder="Monthly Payment *" id="co-buyer-house-monthly-payment" required="">
       </div>
     </div>
     <div id="co-buyer-employment-status" class="co-buyer__wrapper">
@@ -188,14 +188,19 @@ export function coBuyerEmploymentStatus() {
     case 'Self-Employed': {
       let selfEmployedContent = `
                 <div class="form__text-field-wrapper">
-                  <input type="text" class="text-field w-input" maxlength="256" Co-Buyer Business Name" data-name="Co-Buyer Business Name" placeholder="Business Name *" id="co-buyer-Business-Name" required="">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Business Name" data-name="Co-Buyer Business Name" placeholder="Business Name *" id="co-buyer-Business-Name" required="">
                   <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Job Title" data-name="Co-Buyer Job Title" placeholder="Job Title *" id="co-buyer-Job-Title" required="">
                 </div>
                 <div class="form__text-field-wrapper">
                   <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Monthly Income" data-name="Co-Buyer Monthly Income" placeholder="Monthly Income *" id="co-buyer-monthly-income" required="">
-                  <div class="date-field w-embed">
-                    <input id="co-buyer-start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                  </div>
+                  <div class="form__text-field-caption">
+                        <p class="paragraph margin-left margin-top">Start Date *</p>
+                        <div class="text-field__wrapper margin-top">
+                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Months)" data-name="Co-Buyer Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
+                            <div class="text-block dash">/</div>
+                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Years)" data-name="Co-Buyer Start Date (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                        </div>
+                    </div>
                 </div> 
                   `;
       createDiv(selfEmployedContent);
@@ -221,9 +226,14 @@ export function coBuyerEmploymentStatus() {
                     <option value="Social Security">Social Security</option>
                     <option value="Spousal Support">Spousal Support</option>
                   </select>
-                  <div class="date-field w-embed">
-                    <input id="co-buyer-retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                  </div>
+                  <div class="form__text-field-caption">
+                        <p class="paragraph margin-left margin-top">Retired Since *</p>
+                        <div class="text-field__wrapper margin-top">
+                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Months)" data-name="Co-Buyer Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                            <div class="text-block dash">/</div>
+                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Years)" data-name="Co-Buyer Retired Since (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                        </div>
+                    </div>
                 </div>
                 <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="co-buyer-monthly-income" required="">
                   `;
@@ -245,9 +255,14 @@ export function coBuyerEmploymentStatus() {
                     <option value="Spousal Support">Spousal Support</option>
                     <option value="Unemployment Insurance">Unemployment Insurance</option>
                   </select>
-                  <div class="date-field w-embed">
-                    <input id="co-buyer-retired-since" name="Co-Buyer Retired Since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                  </div>
+                  <div class="form__text-field-caption">
+                        <p class="paragraph margin-left margin-top">Retired Since *</p>
+                        <div class="text-field__wrapper margin-top">
+                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Months)" data-name="Co-Buyer Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                            <div class="text-block dash">/</div>
+                            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Retired Since (Years)" data-name="Co-Buyer Retired Since (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
+                        </div>
+                    </div>
                 </div>
                   `;
       createDiv(otherContent);
@@ -259,7 +274,7 @@ export function coBuyerEmploymentStatus() {
 
 export function coBuyerAddIncome() {
   const coBuyerAddIncomeButton = document.getElementById('co-buyer-add-income');
-  let serialNumber = 0;
+  let serialNumber = 1;
   function createDiv(content) {
     var newDiv = document.createElement('div');
     newDiv.id = `income-source-${serialNumber}`;

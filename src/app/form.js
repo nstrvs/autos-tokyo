@@ -134,7 +134,7 @@ export function employmentStatus() {
 
 export function addIncome() {
   const addIncomeButton = document.getElementById('add-income');
-  let serialNumber = 0;
+  let serialNumber = 1;
 
   function createDiv(content) {
     var newDiv = document.createElement('div');
