@@ -37,24 +37,6 @@ input[type="date"]:focus {
   object-fit: contain;
 }
 
-.radio-button-field:hover {
-  border-bottom-color: #0040ff;
-}
-
-.radio-button-field {
-  width: 100%;
-  height: 2.5vw;
-  grid-column-gap: 0.5vw;
-  grid-row-gap: 0.5vw;
-  border-bottom: 0.1vw solid #d8d8d8;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 0;
-  padding-left: 0;
-  display: flex;
-}
-
 @media only screen and (min-width: 1920px) {
   .car-image__wrapper img {
     width: 600px;
