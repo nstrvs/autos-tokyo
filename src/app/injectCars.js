@@ -47,7 +47,7 @@ export function injectCars() {
 
         featuredImages.push(items[i]['front-page-image'].url);
 
-        createDiv(carName);
+        createDiv(items[i].name);
         hoverListener(items[i].name, items[i].slug, featuredImages);
       }
     })
