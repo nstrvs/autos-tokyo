@@ -157,7 +157,7 @@ export function addIncome() {
     let content = `
     <div id="less-income-${serialNumber}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
-      <select id="Income-Source-${serialNumber}" name="Income Source" data-name="Income Source" required="" class="select w-select">
+      <select id="Income-Source-${serialNumber}" name="Income Source ${serialNumber}" data-name="Income Source ${serialNumber}" required="" class="select w-select">
         <option value="Income Source">Income Source *</option>
         <option value="Child Support">Child Support</option>
         <option value="Disability">Disability</option>
@@ -169,7 +169,7 @@ export function addIncome() {
         <option value="Spousal Support">Spousal Support</option>
         <option value="Unemployment Insurance">Unemployment Insurance</option>
       </select>
-      <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly Income-${serialNumber}" required="">
+      <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income ${serialNumber}" data-name="Monthly Income ${serialNumber}" placeholder="Monthly Income *" id="Monthly Income-${serialNumber}" required="">
     `;
     createDiv(content);
     buttonsAnimation();
