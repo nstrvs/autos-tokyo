@@ -12,12 +12,19 @@ export function injectCars() {
     `
     vehicleSelection.appendChild(newDiv);
   }
-
+  
   function createImage(featuredImage) {
     const newDiv = document.createElement('figure');
     newDiv.classList.add('car-image__wrapper');
     newDiv.innerHTML = featuredImage.outerHTML;
     document.body.appendChild(newDiv);
+  }
+  
+  function handlePosition(featuredImage) {
+    document.addEventListener('mousemove', (featuredImage) => { 
+      featuredImage.style.top = `${e.clientY}px`;
+      featuredImage.style.left = `${e.clientX}px`;
+    });
   }
 
   function hoverListener(slug, featuredImage) {
@@ -26,6 +33,7 @@ export function injectCars() {
 
     car.addEventListener('mouseover', (e) => {
         createImage(featuredImage);
+        handlePosition(featuredImage);
     });
 
     car.addEventListener('mouseout', (e) => {
