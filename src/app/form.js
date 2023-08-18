@@ -5,7 +5,7 @@ export function employmentStatus() {
 
   function createDiv(content) {
     var newDiv = document.createElement('div');
-    newDiv.id = 'employment-status__wrapper';
+    newDiv.id = 'employment-status__wrapper';employed
     newDiv.className = 'employment-status__wrapper';
     newDiv.innerHTML = content;
     const container = document.getElementById('employment-status');
@@ -28,9 +28,9 @@ export function employmentStatus() {
                   <div class="form__text-field-caption">
                       <p class="paragraph margin-left margin-top">Start Date *</p>
                       <div class="text-field__wrapper margin-top">
-                          <input type="text" class="text-field w-input" maxlength="256" name="start-date__months" data-name="start-date__months" placeholder="MM" id="start-date__months-2" required="">
+                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Months)" data-name="Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
                           <div class="text-block dash">/</div>
-                          <input type="text" class="text-field w-input" maxlength="256" name="start-date__years" data-name="Move In Date Years" placeholder="YYYY" id="start-date__years-3" required="">
+                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
                       </div>
                   </div>
               </div>
@@ -53,9 +53,14 @@ export function employmentStatus() {
               </div>
               <div class="form__text-field-wrapper">
                 <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly Income" required="">
-                <div class="date-field w-embed">
-                  <input id="start-date" name="start-date" type="text" class="form__date" placeholder="Start Date *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                </div>
+                <div class="form__text-field-caption">
+                      <p class="paragraph margin-left margin-top">Start Date *</p>
+                      <div class="text-field__wrapper margin-top">
+                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Months)" data-name="Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
+                          <div class="text-block dash">/</div>
+                          <input type="text" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
+                      </div>
+                  </div>
               </div> 
                 `;
       createDiv(selfEmployedContent);
@@ -81,9 +86,14 @@ export function employmentStatus() {
                   <option value="Social Security">Social Security</option>
                   <option value="Spousal Support">Spousal Support</option>
                 </select>
-                <div class="date-field w-embed">
-                  <input id="retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                </div>
+                <div class="form__text-field-caption">
+                      <p class="paragraph margin-left margin-top">Retired Since *</p>
+                      <div class="text-field__wrapper margin-top">
+                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Months)" data-name="Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                          <div class="text-block dash">/</div>
+                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Years)" data-name="Retired Since (Years)" placeholder="YYYY" id="start-date__years-3" required="">
+                      </div>
+                  </div>
               </div>
               <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly Income" required="">
                 `;
@@ -105,9 +115,14 @@ export function employmentStatus() {
                   <option value="Spousal Support">Spousal Support</option>
                   <option value="Unemployment Insurance">Unemployment Insurance</option>
                 </select>
-                <div class="date-field w-embed">
-                  <input id="retired-since" name="retired-since" type="text" class="form__date" placeholder="Retired Since *" onfocus="(this.type='date')" onblur="(this.value === '' ? this.type='text' : this.type='date')">
-                </div>
+                <div class="form__text-field-caption">
+                      <p class="paragraph margin-left margin-top">Retired Since *</p>
+                      <div class="text-field__wrapper margin-top">
+                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Months)" data-name="Retired Since (Months)" placeholder="MM" id="start-date__months-2" required="">
+                          <div class="text-block dash">/</div>
+                          <input type="text" class="text-field w-input" maxlength="256" name="Retired Since (Years)" data-name="Retired Since (Years)" placeholder="YYYY" id="start-date__years-3" required="">
+                      </div>
+                  </div>
               </div>
                 `;
       createDiv(otherContent);
