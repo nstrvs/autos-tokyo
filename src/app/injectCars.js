@@ -4,7 +4,7 @@ export function injectCars() {
     let vehicleSelection = document.getElementById('form__cars-list');
     const newDiv = document.createElement('label');
     newDiv.id = carName;
-    newDiv.classList.add('radio-button-field showcars w-radio');
+    newDiv.classList.add("radio-button-field", "showcars", "w-radio");
     newDiv.setAttribute('for', `${carName}-radio`);
     newDiv.innerHTML = `
     <input type="radio" name="Vehicle-Selection" value="${carName}" data-name="Vehicle Selection" id="${carName}-radio" class="radio-button w-radio-input">
