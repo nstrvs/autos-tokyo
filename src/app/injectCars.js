@@ -19,13 +19,6 @@ export function injectCars() {
     newDiv.innerHTML = featuredImage.outerHTML;
     document.body.appendChild(newDiv);
   }
-  
-  function handlePosition(featuredImage) {
-    document.addEventListener('mousemove', (e) => { 
-      featuredImage.style.top = `${e.clientY}px`;
-      featuredImage.style.left = `${e.clientX}px`;
-    });
-  }
 
   function hoverListener(slug, featuredImage) {
 
@@ -33,7 +26,6 @@ export function injectCars() {
 
     car.addEventListener('mouseover', (e) => {
         createImage(featuredImage);
-        handlePosition(featuredImage);
     });
 
     car.addEventListener('mouseout', (e) => {
@@ -53,7 +45,7 @@ export function injectCars() {
 
         const img = new Image();
         img.src = items[i]['front-page-image'].url;
-        img.alt = items[i]['front-page-image'].alt;
+        img.alt = items[i].name;
 
         featuredImages.push(img);
 
