@@ -2,13 +2,15 @@ import './index.css';
 import { employmentStatus, addIncome } from './app/form.js';
 import { coBuyer, coBuyerEmploymentStatus, coBuyerAddIncome, removeDiv } from './app/coBuyer.js';
 import { buttonsAnimation } from './app/hoverAnimations';
-import { injectCars } from './app/injectCars';
+import { injectCars } from './app/injectCars.js';
+import { mobileMenu } from './app/mobileMenu.js';
 
 
 employmentStatus();
 addIncome();
 buttonsAnimation();
 injectCars();
+mobileMenu();
 
 var yesRadio = document.getElementById('yes');
 var noRadio = document.getElementById('no');
