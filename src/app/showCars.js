@@ -9,7 +9,7 @@ export function showCars() {
   }
 
   function hoverListener(carName, featuredImage) { 
-    const carList = document.querySelectorAll('.cars-form_card');
+    const carList = document.querySelectorAll('.radio-button-field');
 
     carList.forEach((car) => {
       car.addEventListener('mouseover', (e) => {
