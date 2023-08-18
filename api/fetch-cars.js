@@ -4,7 +4,7 @@ const ApiKey = process.env.WEBFLOW;
 
 module.exports = (req, res) => {
   
-  res.setHeader('Access-Control-Allow-Origin', ['https://autostokyo.webflow.io', 'https://autostokyo.com']);
+  res.setHeader('Access-Control-Allow-Origin', 'https://autostokyo.com');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
