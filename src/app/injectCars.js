@@ -41,21 +41,14 @@ export function injectCars() {
   .then((json) => {
       // Extract the items array
       const items = json.items;
+      const featuredImages = [];
 
       for (let i = 0; i < items.length; i++) {
-        const carName = items[i].name;
-        const slug = items[i].slug;
-        const featuredImage = items[i]['front-page-image'].url;
 
-        
-        const img = new Image();
-        img.src = featuredImage;
-
-        // Add the preloaded image to the images array
-        images.push(img);
+        featuredImages.push(items[i]['front-page-image'].url);
 
         createDiv(carName);
-        hoverListener(carName, slug, featuredImage);
+        hoverListener(items[i].name, items[i].slug, featuredImages);
       }
     })
     .catch((err) => console.error('error:' + err));
