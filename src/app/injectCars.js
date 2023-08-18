@@ -13,21 +13,19 @@ export function injectCars() {
     vehicleSelection.appendChild(newDiv);
   }
 
-  const images = [];
-
-  function createImage(carName, featuredImage) {
+  function createImage(featuredImage) {
     const newDiv = document.createElement('figure');
     newDiv.classList.add('car-image__wrapper');
-    newDiv.innerHTML = `<img src="${featuredImage}" alt="${carName}">`;
+    newDiv.innerHTML = featuredImage;
     document.body.appendChild(newDiv);
   }
 
-  function hoverListener(carName, slug, featuredImage) {
+  function hoverListener(slug, featuredImage) {
 
     const car = document.getElementById(slug);
 
     car.addEventListener('mouseover', (e) => {
-        createImage(carName, featuredImage);
+        createImage(featuredImage);
     });
 
     car.addEventListener('mouseout', (e) => {
@@ -45,10 +43,14 @@ export function injectCars() {
 
       for (let i = 0; i < items.length; i++) {
 
-        featuredImages.push(items[i]['front-page-image'].url);
+        const img = new Image();
+        img.src = items[i]['front-page-image'].url;
+        img.alt = items[i]['front-page-image'].alt;
 
-        createDiv(items[i].name);
-        hoverListener(items[i].name, items[i].slug, featuredImages);
+        featuredImages.push(img);
+
+        createDiv(items[i].name, items[i].slug);
+        hoverListener(items[i].slug, featuredImages[i]);
       }
     })
     .catch((err) => console.error('error:' + err));
