@@ -16,7 +16,7 @@ export function injectCars() {
   function createImage(featuredImage) {
     const newDiv = document.createElement('figure');
     newDiv.classList.add('car-image__wrapper');
-    newDiv.innerHTML = featuredImage;
+    newDiv.innerHTML = featuredImage.outerHTML;
     document.body.appendChild(newDiv);
   }
 
