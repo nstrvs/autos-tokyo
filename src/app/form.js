@@ -5,7 +5,7 @@ export function employmentStatus() {
 
   function createDiv(content) {
     var newDiv = document.createElement('div');
-    newDiv.id = 'employment-status__wrapper';employed
+    newDiv.id = 'employment-status__wrapper';
     newDiv.className = 'employment-status__wrapper';
     newDiv.innerHTML = content;
     const container = document.getElementById('employment-status');
