@@ -7,9 +7,9 @@ import { mobileMenu } from './app/mobileMenu.js';
 import { createSwiper } from './app/swiper.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log(window.location.pathname)
   const path = window.location.pathname;
   const page = path.split("/").pop();
+  console.log(page)
 
   switch (page) {
       case '/form':
