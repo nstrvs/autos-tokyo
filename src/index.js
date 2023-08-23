@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const page = path.split("/").pop();
 
   switch (page) {
-      case 'form.html':
+      case '/form':
           employmentStatus();
           addIncome();
           buttonsAnimation();
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
               });
           }
           break;
-      case 'index.html':
+      case '/':
           mobileMenu();
           const swiper = createSwiper();
           break;
