@@ -6,6 +6,12 @@ export function createSwiper() {
         slidesPerView: 4,
         spaceBetween: 10,
         centeredSlides: true,
+        breakpoints: {
+            479: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+        }
     });
 
     console.log('swiper created');
