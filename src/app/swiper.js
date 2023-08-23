@@ -2,8 +2,8 @@ import Swiper from 'swiper';
 
 export function createSwiper() {
     const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        speed: 200,
+        slidesPerView: 4,
+        spaceBetween: 30,
         centeredSlides: true,
     });
 
