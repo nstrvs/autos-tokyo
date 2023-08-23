@@ -8,7 +8,6 @@ import { createSwiper } from './app/swiper.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   const page = window.location.pathname;
-  console.log(page)
 
   switch (page) {
       case '/form':
