@@ -140,8 +140,8 @@ input[type="date"]:focus {
   .co-buyer__sibling {
     grid-column-gap: 0vw;
     grid-row-gap: 0vw;
-    border: 0.5vw solid #d8d8d8;
+    border: 0.2vw solid #d8d8d8;
     border-radius: 2vw;
-    padding: 3.5vw 3vw;
+    padding: 0vw;
   }
 }
