@@ -7,8 +7,7 @@ import { mobileMenu } from './app/mobileMenu.js';
 import { createSwiper } from './app/swiper.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-  const path = window.location.pathname;
-  const page = path.split("/").pop();
+  const page = window.location.pathname;
   console.log(page)
 
   switch (page) {
