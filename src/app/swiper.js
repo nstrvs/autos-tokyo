@@ -8,7 +8,7 @@ export function createSwiper() {
         spaceBetween: 10,
     });
 
-    console.log(swiper);
+    console.log('swiper created');
 
     return swiper;
 }
