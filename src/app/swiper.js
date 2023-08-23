@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 export function createSwiper() {
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 10,
         centeredSlides: true,
         mousewheel: true,
