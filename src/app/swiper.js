@@ -4,6 +4,7 @@ export function createSwiper() {
     const swiper = new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
+        centeredSlides: true,
         breakpoints: {
             1921: {
                 slidesPerView: 5,
