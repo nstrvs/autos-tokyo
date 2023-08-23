@@ -1,5 +1,5 @@
 // src/app/swiper.js
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper';
 
 export function createSwiper() {
     return new Swiper('.swiper', {
