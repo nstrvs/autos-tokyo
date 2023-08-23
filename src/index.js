@@ -4,7 +4,6 @@ import { coBuyer, coBuyerEmploymentStatus, coBuyerAddIncome, removeDiv } from '.
 import { buttonsAnimation } from './app/hoverAnimations';
 import { injectCars } from './app/injectCars.js';
 import { mobileMenu } from './app/mobileMenu.js';
-import { createSwiper } from './app/swiper.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   const page = window.location.pathname;
@@ -38,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
           break;
       case '/':
           mobileMenu();
-          const swiper = createSwiper();
           break;
   }
 });
