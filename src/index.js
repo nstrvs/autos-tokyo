@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonsAnimation();
     injectCars();
     mobileMenu();
+    console.log('Before createSwiper call');
     const swiper = createSwiper();
+    console.log('After createSwiper call');
 
     var yesRadio = document.getElementById('yes');
     var noRadio = document.getElementById('no');
