@@ -7,30 +7,39 @@ import { mobileMenu } from './app/mobileMenu.js';
 import { createSwiper } from './app/swiper.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    employmentStatus();
-    addIncome();
-    buttonsAnimation();
-    injectCars();
-    mobileMenu();
-    console.log('Before createSwiper call');
-    const swiper = createSwiper();
-    console.log('After createSwiper call');
+  const path = window.location.pathname;
+  const page = path.split("/").pop();
 
-    var yesRadio = document.getElementById('yes');
-    var noRadio = document.getElementById('no');
-
-    yesRadio.addEventListener('change', function () {
-        if (this.checked) {
-            coBuyer();
-            coBuyerEmploymentStatus();
-            coBuyerAddIncome();
-            buttonsAnimation();
-        }
-    });
-
-    noRadio.addEventListener('change', function () {
-        if (this.checked) {
-            removeDiv();
-        }
-    });
+  switch (page) {
+      case 'form.html':
+          employmentStatus();
+          addIncome();
+          buttonsAnimation();
+          injectCars();
+          mobileMenu();
+          var yesRadio = document.getElementById('yes');
+          var noRadio = document.getElementById('no');
+        
+          if (yesRadio && noRadio) {
+              yesRadio.addEventListener('change', function () {
+                  if (this.checked) {
+                      coBuyer();
+                      coBuyerEmploymentStatus();
+                      coBuyerAddIncome();
+                      buttonsAnimation();
+                  }
+              });
+        
+              noRadio.addEventListener('change', function () {
+                  if (this.checked) {
+                      removeDiv();
+                  }
+              });
+          }
+          break;
+      case 'index.html':
+          mobileMenu();
+          const swiper = createSwiper();
+          break;
+  }
 });
