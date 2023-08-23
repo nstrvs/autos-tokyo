@@ -3,6 +3,30 @@ input[type="date"]:focus {
   border: 0;
 }
 
+.form__date {
+  width: 100%;
+  height: 100%;
+  color: #8d8d8d;
+  border: 1px #000;
+  font-family: aktiv-grotesk,sans-serif;
+  font-size: .8vw;
+  font-weight: 600;
+  line-height: 1vw;
+}
+
+.co-buyer__sibling {
+  width: 100%;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  background-color: #fff;
+  border: 0.1vw solid #d8d8d8;
+  border-radius: 1vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2vw;
+  display: flex;
+}
 
 .co-buyer__wrapper {
   width: 100%;
@@ -42,12 +66,51 @@ input[type="date"]:focus {
     width: 600px;
     height: 350px;
   }
+
+  .form__date {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .co-buyer__sibling {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    background-color: #fff;
+    border: 2px solid #d8d8d8;
+    border-radius: 20px;
+    padding: 40px;
+  }
+
+  .co-buyer__wrapper {
+    width: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  
 }
 
 @media only screen and (max-width: 991px) {
   .car-image__wrapper img {
     width: 46vw;
     height: 23vw;
+  }
+
+  .form__date {
+    font-size: 1vw;
+    line-height: 1.2vw;
+  }
+
+  .co-buyer__sibling {
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 2.5vw;
+    border: 0.2vw solid #d8d8d8;
+    border-radius: 1.2vw;
+    padding: 2.5vw;
+  }
+
+  .co-buyer__wrapper {
+    grid-column-gap: 0.7vw;
+    grid-row-gap: 0.7vw;
   }
 }
 
@@ -67,5 +130,18 @@ input[type="date"]:focus {
 
   .co-buyer__sibling {
     grid-row-gap: 0;
+  }
+
+  .form__date {
+    font-size: 2.5vw;
+    line-height: 2.8vw;
+  }
+
+  .co-buyer__sibling {
+    grid-column-gap: 0vw;
+    grid-row-gap: 0vw;
+    border: 0.5vw solid #d8d8d8;
+    border-radius: 2vw;
+    padding: 3.5vw 3vw;
   }
 }
