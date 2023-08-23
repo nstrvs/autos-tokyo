@@ -2,15 +2,13 @@ import Swiper from 'swiper';
 
 export function createSwiper() {
     const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
         breakpoints: {
-            1920: {
+            479: {
                 slidesPerView: 4,
                 spaceBetween: 10,
                 centeredSlides: true,
-            },
-            479: {
-                slidesPerView: 1,
-                spaceBetween: 10
             },
         }
     });
