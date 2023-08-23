@@ -2,9 +2,7 @@ import Swiper from 'swiper';
 
 export function createSwiper() {
     const swiper = new Swiper('.swiper', {
-        speed: 400,
-        slidesPerView: 3,
-        spaceBetween: 1,
+        speed: 200,
         centeredSlides: true,
     });
 
