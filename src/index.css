@@ -128,10 +128,6 @@ input[type="date"]:focus {
     padding: 3.5vw 3vw;
   }
 
-  .co-buyer__sibling {
-    grid-row-gap: 0;
-  }
-
   .form__date {
     font-size: 2.5vw;
     line-height: 2.8vw;
