@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 
 export function createSwiper() {
-    const swiper = new Swiper('.mySwiper', {
+    const swiper = new Swiper('.swiper', {
         slidesPerView: 4,
         spaceBetween: 30,
         centeredSlides: true,
