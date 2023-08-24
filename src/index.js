@@ -8,35 +8,32 @@ import { mobileMenu } from './app/mobileMenu.js';
 document.addEventListener('DOMContentLoaded', function() {
   const page = window.location.pathname;
 
-  switch (page) {
-      case '/form':
-          employmentStatus();
-          addIncome();
-          buttonsAnimation();
-          injectCars();
-          mobileMenu();
-          var yesRadio = document.getElementById('yes');
-          var noRadio = document.getElementById('no');
-        
-          if (yesRadio && noRadio) {
-              yesRadio.addEventListener('change', function () {
-                  if (this.checked) {
-                      coBuyer();
-                      coBuyerEmploymentStatus();
-                      coBuyerAddIncome();
-                      buttonsAnimation();
-                  }
-              });
-        
-              noRadio.addEventListener('change', function () {
-                  if (this.checked) {
-                      removeDiv();
-                  }
-              });
-          }
-          break;
-      case '/':
-          mobileMenu();
-          break;
+  if (page === '/form') {
+      employmentStatus();
+      addIncome();
+      buttonsAnimation();
+      injectCars();
+      mobileMenu();
+      var yesRadio = document.getElementById('yes');
+      var noRadio = document.getElementById('no');
+    
+      if (yesRadio && noRadio) {
+          yesRadio.addEventListener('change', function () {
+              if (this.checked) {
+                  coBuyer();
+                  coBuyerEmploymentStatus();
+                  coBuyerAddIncome();
+                  buttonsAnimation();
+              }
+          });
+    
+          noRadio.addEventListener('change', function () {
+              if (this.checked) {
+                  removeDiv();
+              }
+          });
+      }
+  } else {
+      mobileMenu();
   }
 });
