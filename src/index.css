@@ -114,8 +114,7 @@ input[type="date"]:focus {
 
 @media only screen and (max-width: 478px) {
   .car-image__wrapper img {
-    width: 100%;
-    height: auto;
+    height: 30vw;
   }
 
   .co-buyer__wrapper {
