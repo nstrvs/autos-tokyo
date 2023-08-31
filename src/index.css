@@ -56,15 +56,14 @@ input[type="date"]:focus {
 }
 
 .car-image__wrapper img {
-  width: 46vw;
-  height: 18vw;
-  object-fit: contain;
+  width: auto;
+  height: 19vw;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 1920px) {
   .car-image__wrapper img {
-    width: 600px;
-    height: 350px;
+    height: 360px;
   }
 
   .form__date {
@@ -91,8 +90,7 @@ input[type="date"]:focus {
 
 @media only screen and (max-width: 991px) {
   .car-image__wrapper img {
-    width: 46vw;
-    height: 23vw;
+    height: 24vw;
   }
 
   .form__date {
@@ -116,8 +114,8 @@ input[type="date"]:focus {
 
 @media only screen and (max-width: 478px) {
   .car-image__wrapper img {
-    width: 60vw;
-    height: 30vw;
+    width: 100%;
+    height: auto;
   }
 
   .co-buyer__wrapper {
