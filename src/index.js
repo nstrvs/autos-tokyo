@@ -4,16 +4,19 @@ import { coBuyer, coBuyerEmploymentStatus, coBuyerAddIncome, removeDiv } from '.
 import { buttonsAnimation } from './app/hoverAnimations';
 import { injectCars } from './app/injectCars.js';
 import { mobileMenu } from './app/mobileMenu.js';
+import { search } from './app/search.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   const page = window.location.pathname;
+
+  mobileMenu();
+  search();
 
   if (page === '/form') {
       employmentStatus();
       addIncome();
       buttonsAnimation();
       injectCars();
-      mobileMenu();
       var yesRadio = document.getElementById('yes');
       var noRadio = document.getElementById('no');
     
@@ -33,7 +36,5 @@ document.addEventListener('DOMContentLoaded', function() {
               }
           });
       }
-  } else {
-      mobileMenu();
-  }
+  } 
 });
