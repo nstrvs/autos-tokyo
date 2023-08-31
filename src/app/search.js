@@ -5,7 +5,7 @@ export function search() {
 
         link.addEventListener('click', function () {
             let searchName = link.getAttribute('search');
-            console.log(searchName);
+            link.setAttribute('href', `https://autostokyo.webflow.io/cars?search=${searchName}`);
         });
     });
 }
