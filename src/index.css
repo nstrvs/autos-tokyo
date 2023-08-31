@@ -63,11 +63,13 @@ input[type="date"]:focus {
   width: auto;
   height: 19vw;
   object-fit: cover;
+  border-radius: 1vw;
 }
 
 @media only screen and (min-width: 1920px) {
   .car-image__wrapper img {
     height: 360px;
+    border-radius: 20px;
   }
 
   .form__date {
@@ -95,6 +97,7 @@ input[type="date"]:focus {
 @media only screen and (max-width: 991px) {
   .car-image__wrapper img {
     height: 24vw;
+    border-radius: 1.5vw;
   }
 
   .form__date {
@@ -119,6 +122,7 @@ input[type="date"]:focus {
 @media only screen and (max-width: 478px) {
   .car-image__wrapper img {
     height: 30vw;
+    border-radius: 3vw;
   }
 
   .co-buyer__wrapper {
