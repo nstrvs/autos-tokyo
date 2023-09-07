@@ -10,6 +10,14 @@ export function search() {
             link.setAttribute('href', `https://autostokyo.webflow.io/cars?search=${searchName}`);
         });
     });
+
+    const searchBar = document.getElementById('searchBar');
+    
+    if (window.location.search === null) {
+        searchBar.setAttribute('placeholder', 'Search by name, type or brand');
+    } else {
+        searchBar.setAttribute('placeholder', window.location.search.replace('?search=', ''));
+    }
 }
 
 export function filter() {
@@ -37,7 +45,19 @@ export function filter() {
     function filterCollectionList(query) {
         $(".collection-item").each(function() {
             const itemName = $(this).data("name").toLowerCase();
+            const itemType = $(this).data("type").toLowerCase();
+            const itemBrand = $(this).data("brand").toLowerCase();
+
+            if (query === null) {
+                console.log('null');
+            }
             if (itemName.includes(query.toLowerCase())) {
+                $(this).show();
+                document.getElementById('searchEmpty').style.display = 'none';
+            } else if (itemType.includes(query.toLowerCase())) {
+                $(this).show();
+                document.getElementById('searchEmpty').style.display = 'none';
+            } else if ( itemBrand.includes(query.toLowerCase())) {
                 $(this).show();
                 document.getElementById('searchEmpty').style.display = 'none';
             } else {
