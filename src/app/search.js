@@ -13,7 +13,7 @@ export function search() {
 
     const searchBar = document.getElementById('searchBar');
     
-    if (window.location.search === null) {
+    if (window.location.search === '') {
         searchBar.setAttribute('placeholder', 'Search by name, type or brand');
     } else {
         searchBar.setAttribute('placeholder', window.location.search.replace('?search=', ''));
