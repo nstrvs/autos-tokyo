@@ -36,7 +36,7 @@ export function filter() {
                 $(this).show();
             } else {
                 $(this).hide();
-                document.querySelector('#searchEmpty').style.display = 'flex';
+                document.getElementById('searchEmpty').style.display = 'flex';
             }
         });
     }
