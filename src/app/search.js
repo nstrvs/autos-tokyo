@@ -34,6 +34,7 @@ export function filter() {
             const itemName = $(this).data("name").toLowerCase();
             if (itemName.includes(query.toLowerCase())) {
                 $(this).show();
+                document.getElementById('searchEmpty').style.display = 'none';
             } else {
                 $(this).hide();
                 document.getElementById('searchEmpty').style.display = 'flex';
