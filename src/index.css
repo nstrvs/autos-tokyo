@@ -60,7 +60,7 @@ input[type="date"]:focus {
 }
 
 .car-image__wrapper img {
-  width: auto;
+  width: 30vw;
   height: 19vw;
   object-fit: cover;
   border-radius: 1vw;
@@ -68,6 +68,7 @@ input[type="date"]:focus {
 
 @media only screen and (min-width: 1920px) {
   .car-image__wrapper img {
+    width: 570px;
     height: 360px;
     border-radius: 20px;
   }
