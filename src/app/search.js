@@ -24,14 +24,15 @@ export function filter() {
             }
     
             // Filter collection list
-            filterCollectionList(searchQuery);
+            filterCollectionList();
         });
     });
     
-    function filterCollectionList(query) {
+    function filterCollectionList() {
 
         $(".collection-item").each(function() {
-            console.log($(this).data("search"));
+            const itemName = $(this).data("search").toLowerCase();
+            console.log(itemName);
         });
 
         /*$(".collection-item").each(function() {
