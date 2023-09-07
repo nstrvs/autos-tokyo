@@ -31,7 +31,7 @@ export function filter() {
     function filterCollectionList() {
 
         $(".collection-item").each(function() {
-            const itemName = $(this).data("search").toLowerCase();
+            const itemName = $(this).data("name").toLowerCase();
             if (itemName.includes(query.toLowerCase())) {
                 $(this).show();
             } else {
