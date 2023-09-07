@@ -31,17 +31,12 @@ export function filter() {
     function filterCollectionList() {
 
         $(".collection-item").each(function() {
-            const itemName = $(this).data("name").toLowerCase();
-            console.log(itemName);
-        });
-
-        /*$(".collection-item").each(function() {
             const itemName = $(this).data("search").toLowerCase();
             if (itemName.includes(query.toLowerCase())) {
                 $(this).show();
             } else {
                 $(this).hide();
             }
-        });*/
+        });
     }
 }
