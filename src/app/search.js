@@ -28,7 +28,7 @@ export function filter() {
         });
     });
     
-    function filterCollectionList() {
+    function filterCollectionList(query) {
 
         $(".collection-item").each(function() {
             const itemName = $(this).data("name").toLowerCase();
