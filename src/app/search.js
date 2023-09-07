@@ -29,13 +29,18 @@ export function filter() {
     });
     
     function filterCollectionList(query) {
+
         $(".collection-item").each(function() {
+            console.log($(this).data("search"));
+        });
+
+        /*$(".collection-item").each(function() {
             const itemName = $(this).data("search").toLowerCase();
             if (itemName.includes(query.toLowerCase())) {
                 $(this).show();
             } else {
                 $(this).hide();
             }
-        });
+        });*/
     }
 }
