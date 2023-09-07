@@ -14,7 +14,7 @@ export function search() {
 
 export function filter() {
     $(document).ready(function() {
-        $("#searchBar").on("input", function() {
+        const searchBar = $("#searchBar").on("input", function() {
             const searchQuery = $(this).val();
     
             // Update URL
@@ -23,13 +23,18 @@ export function filter() {
                 window.history.pushState({path:newurl},'',newurl);
             }
     
-            // Filter collection list
             filterCollectionList(searchQuery);
         });
-    });
-    
-    function filterCollectionList(query) {
 
+        // Get search parameter from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('search');
+
+        // Run filterCollectionList with search parameter
+        filterCollectionList(searchParam);
+    });
+
+    function filterCollectionList(query) {
         $(".collection-item").each(function() {
             const itemName = $(this).data("name").toLowerCase();
             if (itemName.includes(query.toLowerCase())) {
