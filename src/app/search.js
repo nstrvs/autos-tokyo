@@ -24,7 +24,7 @@ export function filter() {
             }
     
             // Filter collection list
-            filterCollectionList();
+            filterCollectionList(searchQuery);
         });
     });
     
