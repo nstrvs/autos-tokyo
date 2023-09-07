@@ -36,6 +36,7 @@ export function filter() {
                 $(this).show();
             } else {
                 $(this).hide();
+                document.querySelector('#searchEmpty').style.display = 'block';
             }
         });
     }
