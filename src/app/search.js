@@ -30,7 +30,7 @@ export function filter() {
     
     function filterCollectionList(query) {
         $(".collection-item").each(function() {
-            const itemName = $(this).data("name").toLowerCase();
+            const itemName = $(this).data("search").toLowerCase();
             if (itemName.includes(query.toLowerCase())) {
                 $(this).show();
             } else {
