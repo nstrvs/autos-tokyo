@@ -4,10 +4,9 @@ export default function adjustmentValue () {
         if (selector.textContent < 0) {
             selector.textContent = selector.textContent.replace('-', '');
             document.getElementById(`card-${selector.id}`).classList.add('is-negative');
-
-            /*document.querySelector(`#card-${selector.id}.fontaswesome.is-value`).textContent = '';
-            document.querySelector(`#card-${selector.id}.text-block.is-value`).textContent = '-';
-            document.querySelector(`#card-${selector.id}.text-block`).style.color = '#7f1111'; */
+            document.querySelector(`#card-${selector.id} .fontaswesome.is-value`).textContent = '';
+            document.querySelector(`#card-${selector.id} .text-block.is-value`).textContent = '-';
+            document.querySelector(`#card-${selector.id} .text-block`).style.color = '#7f1111';
 
         }
     });
