@@ -5,6 +5,7 @@ import { buttonsAnimation } from './app/hoverAnimations';
 import { injectCars } from './app/injectCars.js';
 import { mobileMenu } from './app/mobileMenu.js';
 import { search, filter } from './app/search.js';
+import adjustments from './app/adjustmentValue.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   const page = window.location.pathname;
@@ -38,5 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   } else if (page === '/cars') {
     filter();
+  } else if (page.startsWith('/inventory'))  {
+    adjustments();
   }
 });

@@ -3,6 +3,11 @@ input[type="date"]:focus {
   border: 0;
 }
 
+.is-negative {
+  border: 0.1vw solid #7f1111;
+  background-color: rgba(173, 22, 22, 0.19);
+}
+
 .is-hidden {
   display: none;
 }
