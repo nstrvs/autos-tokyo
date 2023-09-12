@@ -14,7 +14,7 @@ export function search() {
     const searchBar = document.getElementById('searchBar');
     
     if (window.location.search !== '') {
-        searchBar.textContent = window.location.search.replace('?search=', '');
+        searchBar.value = window.location.search.replace('?search=', '');
     }
 }
 
