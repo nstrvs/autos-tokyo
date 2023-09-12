@@ -4,8 +4,8 @@ input[type="date"]:focus {
 }
 
 .is-negative {
-  border: 0.1vw solid #7f1111;
-  background-color: rgba(173, 22, 22, 0.19);
+  border: 0.1vw solid #7f1111 !important;
+  background-color: rgba(173, 22, 22, 0.19) !important;
 }
 
 .is-hidden {
