@@ -40,6 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
   } else if (page === '/cars') {
     filter();
   } else if (page.startsWith('/inventory'))  {
-    consle.log('inventory');
+    console.log('inventory');
   }
 });
