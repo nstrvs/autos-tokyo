@@ -5,7 +5,7 @@ import { buttonsAnimation } from './app/hoverAnimations';
 import { injectCars } from './app/injectCars.js';
 import { mobileMenu } from './app/mobileMenu.js';
 import { search, filter } from './app/search.js';
-import adjustments from 'adjustmentValue.js';
+import adjustments from './app/adjustmentValue.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   const page = window.location.pathname;
