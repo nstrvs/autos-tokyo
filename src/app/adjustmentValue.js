@@ -11,7 +11,6 @@ export default function adjustmentValue () {
             const icon = document.querySelector(`#icon-${selector.id}`);
             icon.textContent = '-';
             icon.style.color = '#7f1111';
-            icon.style.paddingBottom = '2px';
 
         }
     });
