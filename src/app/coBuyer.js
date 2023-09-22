@@ -106,7 +106,7 @@ export function coBuyer() {
       </div>
     </div>
     <div id="co-buyer-employment-status" class="co-buyer__wrapper">
-      <h2 class="heading-2">What is your employment status?</h2>
+      <h2 class="heading-2">What is your co-buyer employment status?</h2>
       <p class="paragraph">Enter your primary source of income.*</p>
       <select id="co-buyer-employment-status__select" name="Co-Buyer Employment-Status" data-name="Co-Buyer Employment-Status" required="" class="select w-select">
         <option value="Employment Status">Employment Status *</option>
@@ -175,6 +175,12 @@ export function coBuyerEmploymentStatus() {
                         </div>
                     </div>
                 </div>
+                <div class="form__text-field-wrapper">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Job Title" data-name="Co-Buyer Employer Job Title" placeholder="Co-Buyer Employer Job Title" id="Co-Buyer-Employer-Job-Title">
+                  <div class="date-field w-embed">
+                      <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Phone Number" data-name="Co-Buyer Employer Phone Number" placeholder="Co-Buyer Employer Phone Number *" id="Co-Buyer-Employer-Phone-Number">
+                  </div>
+              </div>
                 <div class="form__text-field-wrapper">
                     <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Job Title" data-name="Co-Buyer Job Title" placeholder="Job Title *" id="co-buyer-job-title" required="">
                     <div class="date-field w-embed">

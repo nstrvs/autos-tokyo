@@ -35,6 +35,12 @@ export function employmentStatus() {
                   </div>
               </div>
               <div class="form__text-field-wrapper">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Job Title" data-name="Employer Job Title" placeholder="Employer Job Title" id="Employer-Job-Title">
+                  <div class="date-field w-embed">
+                      <input type="number" class="text-field w-input" maxlength="256" name="Employer Phone Number" data-name="Employer Phone Number" placeholder="Employer Phone Number *" id="Employer-Phone-Number">
+                  </div>
+              </div>
+              <div class="form__text-field-wrapper">
                   <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
                   <div class="date-field w-embed">
                       <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly-Income" required="">
