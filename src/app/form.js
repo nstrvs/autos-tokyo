@@ -1,19 +1,19 @@
 import { buttonsAnimation } from "./hoverAnimations";
 
 export function employmentStatus() {
-  const employmentStatus = document.getElementById('employment-status__select');
+  const employmentStatus = document.getElementById("employment-status__select");
 
   function createDiv(content) {
-    var newDiv = document.createElement('div');
-    newDiv.id = 'employment-status__wrapper';
-    newDiv.className = 'employment-status__wrapper';
+    var newDiv = document.createElement("div");
+    newDiv.id = "employment-status__wrapper";
+    newDiv.className = "employment-status__wrapper";
     newDiv.innerHTML = content;
-    const container = document.getElementById('employment-status');
+    const container = document.getElementById("employment-status");
     container.appendChild(newDiv);
   }
 
-  employmentStatus.addEventListener('change', function() {
-    const wrapper = document.getElementById('employment-status__wrapper');
+  employmentStatus.addEventListener("change", function () {
+    const wrapper = document.getElementById("employment-status__wrapper");
     if (wrapper) {
       wrapper.remove();
     }
@@ -21,12 +21,12 @@ export function employmentStatus() {
     const selectedValue = this.value;
 
     switch (selectedValue) {
-    case 'Employed': {
-      let employedContent = `
+      case "Employed": {
+        let employedContent = `
               <div class="form__text-field-wrapper">
-                <input type="text" class="text-field w-input" maxlength="256" name="Employer Job Title" data-name="Employer Job Title" placeholder="Employer Job Title" id="Employer-Job-Title">
+                <input type="text" class="text-field w-input" maxlength="256" name="Employer Job Title *" data-name="Employer Job Title" placeholder="Employer Job Title" id="Employer-Job-Title">
                 <div class="date-field w-embed">
-                    <input type="number" class="text-field w-input" maxlength="256" name="Employer Phone Number" data-name="Employer Phone Number" placeholder="Employer Phone Number" id="Employer-Phone-Number">
+                    <input type="tel" class="text-field w-input" name="Employer Phone Number" data-name="Employer Phone Number *" placeholder="Employer Phone Number" id="Employer-Phone-Number">
                 </div>
               </div>
               <div class="form__text-field-wrapper">
@@ -58,11 +58,11 @@ export function employmentStatus() {
               </div>
    
                 `;
-      createDiv(employedContent);
-      break;
-    }
-    case 'Self-Employed': {
-      let selfEmployedContent = `
+        createDiv(employedContent);
+        break;
+      }
+      case "Self-Employed": {
+        let selfEmployedContent = `
               <div class="form__text-field-wrapper">
                 <input type="text" class="text-field w-input" maxlength="256" name="Business Name" data-name="Business Name" placeholder="Business Name *" id="Business-Name" required="">
                 <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
@@ -79,18 +79,18 @@ export function employmentStatus() {
                   </div>
               </div> 
                 `;
-      createDiv(selfEmployedContent);
-      break;
-    }
-    case 'Unemployed': {
-      let unemployedContent = `
+        createDiv(selfEmployedContent);
+        break;
+      }
+      case "Unemployed": {
+        let unemployedContent = `
               <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly Income" required="">
                 `;
-      createDiv(unemployedContent);
-      break;
-    }
-    case 'Retired': {
-      let retiredContent = `
+        createDiv(unemployedContent);
+        break;
+      }
+      case "Retired": {
+        let retiredContent = `
               <div class="form__text-field-wrapper">
                 <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                   <option value="Income Source">Income Source *</option>
@@ -113,11 +113,11 @@ export function employmentStatus() {
               </div>
               <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly Income" required="">
                 `;
-      createDiv(retiredContent);
-      break;
-    }
-    case 'Other': {
-      let otherContent = `
+        createDiv(retiredContent);
+        break;
+      }
+      case "Other": {
+        let otherContent = `
               <div class="form__text-field-wrapper">
                 <select id="Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                   <option value="Income Source">Income Source *</option>
@@ -141,35 +141,37 @@ export function employmentStatus() {
                   </div>
               </div>
                 `;
-      createDiv(otherContent);
-      break;
-    }
+        createDiv(otherContent);
+        break;
+      }
     }
   });
 }
 
 export function addIncome() {
-  const addIncomeButton = document.getElementById('add-income');
+  const addIncomeButton = document.getElementById("add-income");
   let serialNumber = 1;
 
   function createDiv(content) {
-    var newDiv = document.createElement('div');
+    var newDiv = document.createElement("div");
     newDiv.id = `Income-Source-${serialNumber}`;
-    newDiv.className = 'form__text-field-wrapper add__income';
+    newDiv.className = "form__text-field-wrapper add__income";
     newDiv.innerHTML = content;
-    const container = document.getElementById('add-income__section');
+    const container = document.getElementById("add-income__section");
     container.appendChild(newDiv);
 
     // Add an event listener to the remove button
-    const removeIncomeButton = document.getElementById(`less-income-${serialNumber}`);
-    removeIncomeButton.addEventListener('click', function() {
+    const removeIncomeButton = document.getElementById(
+      `less-income-${serialNumber}`,
+    );
+    removeIncomeButton.addEventListener("click", function () {
       container.removeChild(newDiv);
     });
 
     serialNumber++; // Increment the serial number after creating the div
   }
 
-  addIncomeButton.addEventListener('click', function() {
+  addIncomeButton.addEventListener("click", function () {
     let content = `
     <div id="less-income-${serialNumber}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">

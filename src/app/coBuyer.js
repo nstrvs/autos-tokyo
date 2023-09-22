@@ -168,30 +168,40 @@ export function coBuyerEmploymentStatus() {
     switch (selectedValue) {
       case "Employed": {
         let employedContent = `
-                <div class="form__text-field-wrapper">
-                    <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Job Title" data-name="Co-Buyer Employer Job Title" placeholder="Co-Buyer Employer Job Title" id="Co-Buyer-Employer-Job-Title">
-                    <div class="date-field w-embed">
-                        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Phone Number" data-name="Co-Buyer Employer Phone Number" placeholder="Co-Buyer Employer Phone Number" id="Co-Buyer-Employer-Phone-Number">
-                    </div>
-                </div>
-                <div class="form__text-field-wrapper">
-                    <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Name" data-name="Co-Buyer Employer Name" placeholder="Employer Name *" id="Co-Buyer-Employer-Name" required="">
-                    <div class="form__text-field-caption">
-                        <p class="paragraph margin-left margin-top">Start Date *</p>
-                        <div class="text-field__wrapper margin-top">
-                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Months)" data-name="Co-Buyer Start Date (Months)" placeholder="MM" id="start-date__months-2" required="">
-                            <div class="text-block dash">/</div>
-                            <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Years)" data-name="Co-Buyer Start Date (Years)" placeholder="YYYY" id="co-buyer-start-date__years" required="">
-                        </div>
-                    </div>
-                </div>
-                <div class="form__text-field-wrapper">
-                    <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Job Title" data-name="Co-Buyer Job Title" placeholder="Job Title *" id="co-buyer-job-title" required="">
-                    <div class="date-field w-embed">
-                        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Monthly Income" data-name="Co-Buyer Monthly Income" placeholder="Monthly Income *" id="Co-Buyer-Monthly-Income" required="">
-                    </div>
-                </div> 
-                  `;
+          <div class="form__text-field-wrapper">
+            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Job Title *" data-name="Co-Buyer Employer Job Title" placeholder="Employer Job Title" id="Co-Buyer-Employer-Job-Title">
+            <div class="date-field w-embed">
+                <input type="tel" class="text-field w-input" name="Co-Buyer Employer Phone Number" data-name="Co-Buyer Employer Phone Number *" placeholder="Employer Phone Number" id="Co-Buyer-Employer-Phone-Number">
+            </div>
+          </div>
+          <div class="form__text-field-wrapper">
+            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Name" data-name="Co-Buyer Employer Name" placeholder="Employer Name *" id="Co-Buyer-Employer-Name" required="">
+            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Address" data-name="Co-Buyer Employer Address" placeholder="Employer Address *" id="Co-Buyer-Employer-Address" required="">
+          </div>
+          <div class="form__text-field-wrapper">
+            <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Job Title" data-name="Co-Buyer Job Title" placeholder="Job Title *" id="Co-Buyer-Job-Title" required="">
+            <div class="date-field w-embed">
+                <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Monthly Income" data-name=Co-Buyer "Monthly Income" placeholder="Monthly Income *" id="Co-Buyer-Monthly-Income" required="">
+            </div>
+          </div>
+          <div class="form__text-field-wrapper">
+            <select id="Co-Buyer-Income-Type" name="Co-Buyer Income Type" data-name="Co-Buyer Income Type" required="" class="select w-select">
+              <option value="Income Type">Income Type *</option>
+              <option value="Disability">Bank statement</option>
+              <option value="Investment Income">PAYSTUB</option>
+              <option value="Investment Income">Cancelled checks</option>
+              <option value="Investment Income">Job letter</option>
+            </select>
+            <div class="form__text-field-caption">
+              <p class="paragraph margin-left margin-top">Start Date *</p>
+              <div class="text-field__wrapper margin-top">
+                  <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Months)" data-name="Co-Buyer Start Date (Months)" placeholder="MM" id="Co-Buyer-start-date__months-2" required="">
+                  <div class="text-block dash">/</div>
+                  <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Start Date (Years)" data-name="Co-Buyer Start Date (Years)" placeholder="YYYY" id="Co-Buyer-start-date__years-3" required="">
+              </div>
+            </div>
+            </div>
+                    `;
         createDiv(employedContent);
         break;
       }
