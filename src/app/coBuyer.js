@@ -165,6 +165,12 @@ export function coBuyerEmploymentStatus() {
     case 'Employed': {
       let employedContent = `
                 <div class="form__text-field-wrapper">
+                    <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Job Title" data-name="Co-Buyer Employer Job Title" placeholder="Co-Buyer Employer Job Title" id="Co-Buyer-Employer-Job-Title">
+                    <div class="date-field w-embed">
+                        <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Phone Number" data-name="Co-Buyer Employer Phone Number" placeholder="Co-Buyer Employer Phone Number" id="Co-Buyer-Employer-Phone-Number">
+                    </div>
+                </div>
+                <div class="form__text-field-wrapper">
                     <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Name" data-name="Co-Buyer Employer Name" placeholder="Employer Name *" id="Co-Buyer-Employer-Name" required="">
                     <div class="form__text-field-caption">
                         <p class="paragraph margin-left margin-top">Start Date *</p>
@@ -175,12 +181,6 @@ export function coBuyerEmploymentStatus() {
                         </div>
                     </div>
                 </div>
-                <div class="form__text-field-wrapper">
-                  <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Job Title" data-name="Co-Buyer Employer Job Title" placeholder="Co-Buyer Employer Job Title" id="Co-Buyer-Employer-Job-Title">
-                  <div class="date-field w-embed">
-                      <input type="number" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Phone Number" data-name="Co-Buyer Employer Phone Number" placeholder="Co-Buyer Employer Phone Number *" id="Co-Buyer-Employer-Phone-Number">
-                  </div>
-              </div>
                 <div class="form__text-field-wrapper">
                     <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Job Title" data-name="Co-Buyer Job Title" placeholder="Job Title *" id="co-buyer-job-title" required="">
                     <div class="date-field w-embed">

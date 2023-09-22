@@ -23,6 +23,12 @@ export function employmentStatus() {
     switch (selectedValue) {
     case 'Employed': {
       let employedContent = `
+              <div class="form__text-field-wrapper">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Job Title" data-name="Employer Job Title" placeholder="Employer Job Title" id="Employer-Job-Title">
+                  <div class="date-field w-embed">
+                      <input type="number" class="text-field w-input" maxlength="256" name="Employer Phone Number" data-name="Employer Phone Number" placeholder="Employer Phone Number" id="Employer-Phone-Number">
+                  </div>
+              </div>
                   <div class="form__text-field-wrapper">
                   <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
                   <div class="form__text-field-caption">
@@ -32,12 +38,6 @@ export function employmentStatus() {
                           <div class="text-block dash">/</div>
                           <input type="number" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
                       </div>
-                  </div>
-              </div>
-              <div class="form__text-field-wrapper">
-                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Job Title" data-name="Employer Job Title" placeholder="Employer Job Title" id="Employer-Job-Title">
-                  <div class="date-field w-embed">
-                      <input type="number" class="text-field w-input" maxlength="256" name="Employer Phone Number" data-name="Employer Phone Number" placeholder="Employer Phone Number *" id="Employer-Phone-Number">
                   </div>
               </div>
               <div class="form__text-field-wrapper">
