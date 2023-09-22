@@ -1,9 +1,9 @@
 import { buttonsAnimation } from "./hoverAnimations";
 
 export function coBuyer() {
-  var newDiv = document.createElement('div');
-  newDiv.id = 'co-buyer__sibling';
-  newDiv.className = 'co-buyer__sibling';
+  var newDiv = document.createElement("div");
+  newDiv.id = "co-buyer__sibling";
+  newDiv.className = "co-buyer__sibling";
   newDiv.innerHTML = `
     <div class="co-buyer__wrapper">
       <h2 class="heading-2">Let's get some info from your co‑buyer</h2>
@@ -130,31 +130,35 @@ export function coBuyer() {
       </div>
     </div>
     `;
-  const sibling = document.getElementById('co-buyer__section');
+  const sibling = document.getElementById("co-buyer__section");
   sibling.parentNode.insertBefore(newDiv, sibling.nextSibling);
 }
 
 export function removeDiv() {
-  const coBuyerContent = document.getElementById('co-buyer__sibling');
+  const coBuyerContent = document.getElementById("co-buyer__sibling");
   if (coBuyerContent) {
     coBuyerContent.remove();
   }
 }
 
 export function coBuyerEmploymentStatus() {
-  const coBuyerEmploymentStatus = document.getElementById('co-buyer-employment-status__select');
+  const coBuyerEmploymentStatus = document.getElementById(
+    "co-buyer-employment-status__select",
+  );
 
   function createDiv(content) {
-    var newDiv = document.createElement('div');
-    newDiv.id = 'co-buyer-employment-status__wrapper';
-    newDiv.className = 'co-buyer-employment-status__wrapper';
+    var newDiv = document.createElement("div");
+    newDiv.id = "co-buyer-employment-status__wrapper";
+    newDiv.className = "co-buyer-employment-status__wrapper";
     newDiv.innerHTML = content;
-    const container = document.getElementById('co-buyer-employment-status');
+    const container = document.getElementById("co-buyer-employment-status");
     container.appendChild(newDiv);
   }
 
-  coBuyerEmploymentStatus.addEventListener('change', function () {
-    const wrapper = document.getElementById('co-buyer-employment-status__wrapper');
+  coBuyerEmploymentStatus.addEventListener("change", function () {
+    const wrapper = document.getElementById(
+      "co-buyer-employment-status__wrapper",
+    );
     if (wrapper) {
       wrapper.remove();
     }
@@ -162,8 +166,8 @@ export function coBuyerEmploymentStatus() {
     const selectedValue = this.value;
 
     switch (selectedValue) {
-    case 'Employed': {
-      let employedContent = `
+      case "Employed": {
+        let employedContent = `
                 <div class="form__text-field-wrapper">
                     <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Employer Job Title" data-name="Co-Buyer Employer Job Title" placeholder="Co-Buyer Employer Job Title" id="Co-Buyer-Employer-Job-Title">
                     <div class="date-field w-embed">
@@ -188,11 +192,11 @@ export function coBuyerEmploymentStatus() {
                     </div>
                 </div> 
                   `;
-      createDiv(employedContent);
-      break;
-    }
-    case 'Self-Employed': {
-      let selfEmployedContent = `
+        createDiv(employedContent);
+        break;
+      }
+      case "Self-Employed": {
+        let selfEmployedContent = `
                 <div class="form__text-field-wrapper">
                   <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Business Name" data-name="Co-Buyer Business Name" placeholder="Business Name *" id="co-buyer-Business-Name" required="">
                   <input type="text" class="text-field w-input" maxlength="256" name="Co-Buyer Job Title" data-name="Co-Buyer Job Title" placeholder="Job Title *" id="co-buyer-Job-Title" required="">
@@ -209,18 +213,18 @@ export function coBuyerEmploymentStatus() {
                     </div>
                 </div> 
                   `;
-      createDiv(selfEmployedContent);
-      break;
-    }
-    case 'Unemployed': {
-      let unemployedContent = `
+        createDiv(selfEmployedContent);
+        break;
+      }
+      case "Unemployed": {
+        let unemployedContent = `
                 <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="co-buyer-monthly-income" required="">
                   `;
-      createDiv(unemployedContent);
-      break;
-    }
-    case 'Retired': {
-      let retiredContent = `
+        createDiv(unemployedContent);
+        break;
+      }
+      case "Retired": {
+        let retiredContent = `
                 <div class="form__text-field-wrapper">
                   <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                     <option value="Income Source">Income Source *</option>
@@ -243,11 +247,11 @@ export function coBuyerEmploymentStatus() {
                 </div>
                 <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="co-buyer-monthly-income" required="">
                   `;
-      createDiv(retiredContent);
-      break;
-    }
-    case 'Other': {
-      let otherContent = `
+        createDiv(retiredContent);
+        break;
+      }
+      case "Other": {
+        let otherContent = `
                 <div class="form__text-field-wrapper">
                   <select id="co-buyer-Income-Source" name="Income Source" data-name="Income Source" required="" class="select w-select">
                     <option value="Income Source">Income Source *</option>
@@ -271,31 +275,33 @@ export function coBuyerEmploymentStatus() {
                     </div>
                 </div>
                   `;
-      createDiv(otherContent);
-      break;
+        createDiv(otherContent);
+        break;
+      }
     }
-    }    
   });
 }
 
 export function coBuyerAddIncome() {
-  const coBuyerAddIncomeButton = document.getElementById('co-buyer-add-income');
+  const coBuyerAddIncomeButton = document.getElementById("co-buyer-add-income");
   let serialNumber = 1;
   function createDiv(content) {
-    var newDiv = document.createElement('div');
+    var newDiv = document.createElement("div");
     newDiv.id = `income-source-${serialNumber}`;
-    newDiv.className = 'form__text-field-wrapper add__income';
+    newDiv.className = "form__text-field-wrapper add__income";
     newDiv.innerHTML = content;
-    const container = document.getElementById('co-buyer-add-income__section');
+    const container = document.getElementById("co-buyer-add-income__section");
     container.appendChild(newDiv);
     // Add an event listener to the remove button
-    const removeIncomeButton = document.getElementById(`co-buyer-less-income-${serialNumber}`);
-    removeIncomeButton.addEventListener('click', function () {
+    const removeIncomeButton = document.getElementById(
+      `co-buyer-less-income-${serialNumber}`,
+    );
+    removeIncomeButton.addEventListener("click", function () {
       container.removeChild(newDiv);
     });
     serialNumber++; // Increment the serial number after creating the div
   }
-  coBuyerAddIncomeButton.addEventListener('click', function () {
+  coBuyerAddIncomeButton.addEventListener("click", function () {
     let content = `
     <div id="co-buyer-less-income-${serialNumber}" class="fontawesome h2 button"></div>
     <div class="form__text-field-wrapper">
@@ -315,6 +321,5 @@ export function coBuyerAddIncome() {
     `;
     createDiv(content);
     buttonsAnimation();
-  }
-  );
+  });
 }

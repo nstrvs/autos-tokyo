@@ -17,8 +17,8 @@ input[type="date"]:focus {
   height: 100%;
   color: #8d8d8d;
   border: 1px #000;
-  font-family: aktiv-grotesk,sans-serif;
-  font-size: .8vw;
+  font-family: aktiv-grotesk, sans-serif;
+  font-size: 0.8vw;
   font-weight: 600;
   line-height: 1vw;
 }
@@ -96,7 +96,6 @@ input[type="date"]:focus {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
-  
 }
 
 @media only screen and (max-width: 991px) {

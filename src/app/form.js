@@ -24,13 +24,29 @@ export function employmentStatus() {
     case 'Employed': {
       let employedContent = `
               <div class="form__text-field-wrapper">
-                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Job Title" data-name="Employer Job Title" placeholder="Employer Job Title" id="Employer-Job-Title">
+                <input type="text" class="text-field w-input" maxlength="256" name="Employer Job Title" data-name="Employer Job Title" placeholder="Employer Job Title" id="Employer-Job-Title">
+                <div class="date-field w-embed">
+                    <input type="number" class="text-field w-input" maxlength="256" name="Employer Phone Number" data-name="Employer Phone Number" placeholder="Employer Phone Number" id="Employer-Phone-Number">
+                </div>
+              </div>
+              <div class="form__text-field-wrapper">
+                <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
+                <input type="text" class="text-field w-input" maxlength="256" name="Employer Address" data-name="Employer Address" placeholder="Employer Address *" id="Employer-Address" required="">
+              </div>
+              <div class="form__text-field-wrapper">
+                  <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
                   <div class="date-field w-embed">
-                      <input type="number" class="text-field w-input" maxlength="256" name="Employer Phone Number" data-name="Employer Phone Number" placeholder="Employer Phone Number" id="Employer-Phone-Number">
+                      <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly-Income" required="">
                   </div>
               </div>
-                  <div class="form__text-field-wrapper">
-                  <input type="text" class="text-field w-input" maxlength="256" name="Employer Name" data-name="Employer Name" placeholder="Employer Name *" id="Employer-Name" required="">
+              <div class="form__text-field-wrapper">
+                  <select id="Income-Type" name="Income Type" data-name="Income Type" required="" class="select w-select">
+                    <option value="Income Type">Income Type *</option>
+                    <option value="Disability">Bank statement</option>
+                    <option value="Investment Income">PAYSTUB</option>
+                    <option value="Investment Income">Cancelled checks</option>
+                    <option value="Investment Income">Job letter</option>
+                  </select>
                   <div class="form__text-field-caption">
                       <p class="paragraph margin-left margin-top">Start Date *</p>
                       <div class="text-field__wrapper margin-top">
@@ -38,12 +54,6 @@ export function employmentStatus() {
                           <div class="text-block dash">/</div>
                           <input type="number" class="text-field w-input" maxlength="256" name="Start Date (Years)" data-name="Start Date (Years)" placeholder="YYYY" id="start-date__years-3" required="">
                       </div>
-                  </div>
-              </div>
-              <div class="form__text-field-wrapper">
-                  <input type="text" class="text-field w-input" maxlength="256" name="Job Title" data-name="Job Title" placeholder="Job Title *" id="Job-Title" required="">
-                  <div class="date-field w-embed">
-                      <input type="number" class="text-field w-input" maxlength="256" name="Monthly Income" data-name="Monthly Income" placeholder="Monthly Income *" id="Monthly-Income" required="">
                   </div>
               </div>
    

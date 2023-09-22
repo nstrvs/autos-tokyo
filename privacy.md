@@ -62,7 +62,6 @@ Complying with applicable regulatory and legal requirements, relevant industry s
 Responding to legal, court, or regulatory investigations or requests for information.
 We also may use the information we obtain about you in other ways for which we provide specific notice and obtain your consent if required by applicable law.
 
-
 In addition, we may combine information that we obtain about you. For example, we may combine:
 
 Information that we have obtained offline, including in-person at our stores or over the phone, with information we obtain through our Online Services;
@@ -76,18 +75,13 @@ We use third-party online analytics services on our Online Services, including �
 Online Tracking and Interest-Based Advertising
 We collect information about your online activities over time and across different websites, apps and devices, including from third-party websites and apps. We also work with third-parties, such as ad networks and other service providers, which collect information about your online activities in this way. To do this, we (including the third-parties) may use browser cookies, web beacons, flash cookies, unique identifiers associated with your devices and apps, and other technologies. The information collected via these technologies is described in the Automated Collection of Data section above.;
 
-
 We and certain third parties display interest-based advertising using information gathered about you over time and across devices and third-party websites, apps and platforms. Interest-based advertising or “online behavioral advertising” includes ads served to you after you leave our website, encouraging you to return. They also include ads we think are relevant based on your shopping habits or online activities. These ads might be served on websites or on mobile apps. They might also be served in emails or other ways. We might serve these ads, or third parties may serve ads. They might be about our products or other companies’ products.
-
 
 To decide what is relevant to you, we and certain third parties, such as our ad networks and other service providers, use information you make available to us when you interact with us, our affiliates, and other third parties. We and certain third parties gather this information using tracking tools, such as those described above. For example, we or the third parties may look at your browsing behaviors across devices. We and the third parties also may look at these activities on our apps and platforms and the apps and platforms of others.
 
-
 We work with third parties who help gather this information and serve ads. These third parties might link your name, email address and other information to data they obtain. That might include past purchases made offline or online. Or, it might include online usage information.
 
-
 To learn how to opt out of certain ad network interest-based advertising in the U.S., please visit YourAdChoices and Network Marketing Initiative websites. Choices you make may be browser-specific and device-specific. In addition, your mobile device settings may allow you to limit your device from sharing certain information for advertising purposes. Learn more information on these types of settings by exploring Google Play Help - Advertising ID and limiting your Apple ad tracking. Additional information about opting out of targeted advertising is included in the Your Rights section below.
-
 
 Information Sharing
 We may share your personal information with third parties for the business purposes described above in accordance with applicable law:
